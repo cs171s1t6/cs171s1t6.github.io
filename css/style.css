@@ -1,0 +1,47 @@
+.center {
+    text-align: center;
+}
+
+.container, header, main, footer {
+    border: solid black 1px;
+}
+
+body {
+    background-color: lightgrey;
+}
+.container {
+    background-color: white;
+}
+
+
+
+/****************/
+/*  LINE CHART  */
+/****************/
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.axis text {
+    font-size: 11px;
+}
+
+.line {
+    fill: none;
+    stroke: #1C9A3D;
+    stroke-width: 1.5px;
+}
+
+.tooltip-circle {
+    fill: #96AB96;
+}
+
+
+path {
+    stroke: grey;
+    stroke-width: 0.5px;
+    fill: grey;
+}

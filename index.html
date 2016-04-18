@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Waste</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <div class="col-xs-12">
+                <h1 class="center">Food Waste</h1>
+            </div>
+        </header>
+        <main class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3 class="center">Summary</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul>
+                            <li>How much food is wasted worldwide, by country?</li>
+                            <li>Which types of foods are most wasted?</li>
+                            <li>What are the temporal trends in food waste?</li>
+                            <li>How does a counties average income correlate with food waste?</li>
+                            <li>How many people are malnourished, by country?</li>
+                            <li>What can be done locally to reduce food waste?</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul>
+                            <li>Pending Data Analysis</li>
+                            <li>Pending Data Analysis</li>
+                            <li>Pending Data Analysis</li>
+                            <li>Pending Data Analysis</li>
+                            <li>Pending Data Analysis</li>
+                            <li>Pending Data Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Food Waste as a Global Problem</h3>
+                        <p>Lorum Ipsum</p>
+                    </div>
+                    <div class="col-xs-12">
+                        <div id="worldMap"></div>
+                        <div id="colorScale"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="lineChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="areaChart"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div id="input-row" class="col-xs-12">
+                                <label for="productValues">Food Type:</label>
+                                <select id="productValues" onchange="updateVisualization()">
+                                    <option value="All">All</option>
+                                    <option value="Cereals - Excluding Beer">Cereals (Excluding Beer)</option>
+                                    <option value="Vegetables">Vegetables</option>
+                                    <option value="Starchy Roots">Starchy Roots</option>
+                                    <option value="Vegetables - Other">Vegetables, Other</option>
+                                    <option value="Fruits - Excluding Wine">Fruits (Excluding Wine)</option>
+                                    <option value="Sugar Crops">Sugar Crops</option>
+                                    <option value="Sugar cane">Sugar cane</option>
+                                    <option value="Milk - Excluding Butter">Milk ( Excluding Butter)</option>
+                                    <option value="Maize and products">Maize & Products</option>
+                                    <option value="Potatoes and products">Potatoes & Products</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-12">
+                                <div>
+                                    <label for="yearRangeValues">Year range:</label>
+                                    <input type="text" id="yearRangeValues" readonly>
+                                </div>
+                                <div id="yearRangeSelector"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <p>Lorum ipsum</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Food Waste as a Local Problem</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <p>Lorum ipsum</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="massMap"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h3>Food Waste as a Personal Problem</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <p>Lorum ipsum</p>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="bostonMap"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="row">
+            <div class="col-xs-12">
+                <p>Copyright &copy; 2016 CS171 Studio 1 Team 6</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/queue.min.js"></script>
+    <script src="js/topojson.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/d3.tip.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
