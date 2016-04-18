@@ -11,40 +11,73 @@
     <div class="container">
         <header class="row">
             <div class="col-xs-12">
-                <h1 class="center">Food Waste</h1>
+                <img src="img/header.png">
             </div>
         </header>
         <main class="row">
             <div class="col-xs-12">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h3 class="center">Summary</h3>
+                        <h3 class="center">FOOD WASTE - IS EVERYONE’S BUSINESS</h3>
                     </div>
-                    <div class="col-xs-6">
-                        <ul>
-                            <li>How much food is wasted worldwide, by country?</li>
-                            <li>Which types of foods are most wasted?</li>
-                            <li>What are the temporal trends in food waste?</li>
-                            <li>How does a counties average income correlate with food waste?</li>
-                            <li>How many people are malnourished, by country?</li>
-                            <li>What can be done locally to reduce food waste?</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6">
-                        <ul>
-                            <li>Pending Data Analysis</li>
-                            <li>Pending Data Analysis</li>
-                            <li>Pending Data Analysis</li>
-                            <li>Pending Data Analysis</li>
-                            <li>Pending Data Analysis</li>
-                            <li>Pending Data Analysis</li>
-                        </ul>
+                    <div class="col-xs-12">
+                        <h4>Main Quesitons:</h4>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>How/What/When/Why</th>
+                                    <th>Teasers</th>
+                                    <th>Explore It!</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>How much food is wasted worldwide, by country?</td>
+                                    <td>
+                                        According to FAO 1/3 of total food produced globally goes to waste.<br><br>
+                                        Some countries waste more food than others - many factors come into play.
+                                    </td>
+                                    <td>Select a year & Click on a country.</td>
+                                </tr>
+                                <tr>
+                                    <td>Which types of foods are most wasted?</td>
+                                    <td>
+                                        Some food types are wasted more than others around the world, and this amount changes across years.<br>
+                                        High calorie foods are wasted the most.
+                                    </td>
+                                    <td>
+                                        Click on the drop down to select from one of the top 10 food types.<br><br>
+                                        <i>Even Alcoholic beverages have a place in food waste.</i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>What are the temporal trends in food waste?</td>
+                                    <td>Food waste is not static; across the years levels of food wasted per country have changed, as well per food type.</td>
+                                    <td>With the slider you can check for trends by country and/or food type.</td>
+                                </tr>
+                                <tr>
+                                    <td>How does a country's average income correlate with food waste?</td>
+                                    <td>Countries with higher average income tend to waste more food.</td>
+                                    <td>With the line graph you can see the relationship between food waste and income per capita.</td>
+                                </tr>
+                                <tr>
+                                    <td>What can be done locally to reduce food waste?</td>
+                                    <td>Everyone can reduce the amount of food wasted -  you can do this with simple changes to your day-to-day life.</td>
+                                    <td>
+                                        Check out the map for a food bank or food pantry near you.<br><br>
+                                        Don’t miss our STOP WASTING FOOD tips! Easy to do & share.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
                         <h3>Food Waste as a Global Problem</h3>
-                        <p>Lorum Ipsum</p>
+                        <p>It’s estimated that 1.3 Gtonnes of edible food are wasted world wide, and this is costing the world approximately USD 750 billion.</p>
+                        <p>Overall, on a per-capita basis, much more food is wasted in the industrialized world than in developing countries.</p>
+                        <p>Cereals (excluding beer) are the biggest contributor to food waste. Did you know that - <i>cereals provide more food energy worldwide than any other type of crop?</i></p>
                     </div>
                     <div class="col-xs-12">
                         <div id="worldMap"></div>
@@ -68,8 +101,13 @@
                     </div>
                     <div class="col-xs-12">
                         <div class="row">
-                            <div id="input-row" class="col-xs-12">
-                                <label for="productValues">Food Type:</label>
+                            <div class="col-xs-6">
+                                <label for="yearRangeValues">Year range:</label>
+                                <input type="text" id="yearRangeValues" readonly>
+                                <div id="yearRangeSelector"></div>
+                            </div>
+                            <div id="input-row" class="col-xs-6">
+                                <label for="productValues">Food Type:</label><br>
                                 <select id="productValues" onchange="updateVisualization()">
                                     <option value="All">All</option>
                                     <option value="Cereals - Excluding Beer">Cereals (Excluding Beer)</option>
@@ -84,17 +122,7 @@
                                     <option value="Potatoes and products">Potatoes & Products</option>
                                 </select>
                             </div>
-                            <div class="col-xs-12">
-                                <div>
-                                    <label for="yearRangeValues">Year range:</label>
-                                    <input type="text" id="yearRangeValues" readonly>
-                                </div>
-                                <div id="yearRangeSelector"></div>
-                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <p>Lorum ipsum</p>
                     </div>
                 </div>
                 <div class="row">
@@ -102,10 +130,25 @@
                         <h3>Food Waste as a Local Problem</h3>
                     </div>
                     <div class="col-xs-6">
-                        <p>Lorum ipsum</p>
+                        <p>In America it’s estimated that 1860000 tones of food were wasted in 2011. Image 6000 airplanes with cargo- putting them together they will create a line long enough to cover the distance BOSTON - PARIS.</p>
+                        <img src="img/local.png">
+                        <p>Consumer and foodservice food waste is the largest source of food waste, this includes restaurants, universities and hospitals. This issue happens in all countries and in all cities, including your city. Discover the main contributors of food waste in Boston.</p>
                     </div>
                     <div class="col-xs-6">
                         <div id="massMap"></div>
+                        <label for="Selector">Data: </label>
+                        <select class="form-control" id="selector">
+                            <option value="Waste">Total Waste</option>
+                            <option value="F">Waste of Food and Beverage Manufacturers/Processors</option>
+                            <option value="W">Waste of Wholesale Distributors</option>
+                            <option value="IH">Waste of Healthcare Facilities</option>
+                            <option value="IS">Waste of Independent Schools</option>
+                            <option value="IC">Waste of Colleges/Universities</option>
+                            <option value="IP">Waste of Correctional Facilities</option>
+                            <option value="C">Waste of Resorts and Conference Facilities</option>
+                            <option value="G">Waste of Resorts and Restaurants</option>
+                            <option value="R">Waste of Supermarkets and Grocery Stores</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row">
@@ -113,7 +156,17 @@
                         <h3>Food Waste as a Personal Problem</h3>
                     </div>
                     <div class="col-xs-6">
-                        <p>Lorum ipsum</p>
+                        <p>Food waste affects us all.</p>
+                        <img src="img/personal.png">
+                        <p>Food waste has an ecological and economical impact that permeates through all aspects of our life.</p>
+                        <p>You can help to turn it around, by taking some small steps - and STOP WASTING FOOD.</p>
+                        <p>There is a lot you can doto reduce the amount of food waste you and your close ones produce.  Some tips for you:</p>
+                        <p><strong>Shop Wisely</strong> - plan your meals, try not to fall for impulse buys that you will later throw away.</p>
+                        <p><strong>Buy fruit and vegetables of all size and colors</strong> - a lot of fruits and vegetables go to waste because they don’t look like in the magazines, but even funny looking ones taste delicious.</p>
+                        <p><strong>Eat leftovers</strong> - there is nothing wrong with asking for a doggy bag after eating out - you can enjoy it later or the next day.</p>
+                        <p><strong>Donate Food:</strong> you can donate that extra food instead of throwing it away to food banks or food pantries</p>
+                        <p><strong>There are many institutions like these close to you, check this map to find the closest to you. </strong></p>
+                        <p>You can also encourage your friends and family to donate theirs.</p>
                     </div>
                     <div class="col-xs-6">
                         <div id="bostonMap"></div>
@@ -136,5 +189,6 @@
     <script src="js/d3.min.js"></script>
     <script src="js/d3.tip.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/local.js"></script>
 </body>
 </html>

@@ -10,9 +10,28 @@ body {
     background-color: lightgrey;
 }
 .container {
+    margin-top: 15px;
     background-color: white;
 }
 
+header {
+    background-color: black;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#worldMap {
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: whitesmoke;
+}
 
 
 /****************/

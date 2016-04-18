@@ -235,6 +235,10 @@ function updateVisualization() {
         return d.Year >= yearSelectionMin && d.Year <= yearSelectionMax;
     });
 
+    tempWorldAreaData = worldAreaData.filter(function(d){
+        return d.Year >= yearSelectionMin && d.Year <= yearSelectionMax;
+    });
+
     tempWorldMapData = worldMapData.filter(function(d){
         return d.Year >= yearSelectionMin && d.Year <= yearSelectionMax;
     });
@@ -304,7 +308,7 @@ function updateVisualization() {
         return d.Value;
     })]);
 
-    worldAreaXScale.domain(d3.extent(worldAreaData, function(d) { return d.Year; }));
+    worldAreaXScale.domain(d3.extent(tempWorldAreaData, function(d) { return d.Year; }));
 
     worldMapColorDomain = [0,(tempWorldMapMaxWaste/4),(tempWorldMapMaxWaste/2),(3*tempWorldMapMaxWaste/4),tempWorldMapMaxWaste];
     worldMapColorScale.domain(worldMapColorDomain);
@@ -332,7 +336,7 @@ function updateVisualization() {
     tempWorldAreaData = worldAreaStack(worldAreaCategoryScale.domain().map(function(name) {
         return {
             name: name,
-            values: worldAreaData.map(function(d) {
+            values: tempWorldAreaData.map(function(d) {
                 return {date: d.Year, y: d[name]};
             })
         };

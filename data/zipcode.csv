@@ -1,0 +1,768 @@
+zip,city,state,trash
+01001,Agawam,MA,0
+01002,Amherst,MA,0
+01003,Amherst,MA,0
+01004,Amherst,MA,0
+01005,Barre,MA,0
+01007,Belchertown,MA,0
+01008,Blandford,MA,0
+01009,Bondsville,MA,0
+01010,Brimfield,MA,0
+01011,Chester,MA,0
+01012,Chesterfield,MA,0
+01013,Chicopee,MA,0
+01014,Chicopee,MA,0
+01020,Chicopee,MA,0
+01021,Chicopee,MA,0
+01022,Chicopee,MA,0
+01026,Cummington,MA,0
+01027,Easthampton,MA,0
+01028,East Longmeadow,MA,0
+01029,East Otis,MA,0
+01030,Feeding Hills,MA,0
+01031,Gilbertville,MA,0
+01032,Goshen,MA,04
+01033,Granby,MA,04
+01034,Granville,MA,0
+01035,Hadley,MA,04
+01036,Hampden,MA,0
+01037,Hardwick,MA,0
+01038,Hatfield,MA,0
+01039,Haydenville,M
+01040,Holyoke,MA,0
+01041,Holyoke,MA,0
+01050,Huntington,MA
+01053,Leeds,MA,042
+01054,Leverett,MA,0
+01056,Ludlow,MA,04
+01057,Monson,MA,04
+01059,North Amherst,MA,0
+01060,Northampton,MA,0
+01061,Northampton,MA,0
+01062,Florence,MA,0
+01063,Northampton,MA,0
+01066,North Hatfield,MA,0
+01068,Oakham,MA,04
+01069,Palmer,MA,04
+01070,Plainfield,MA,0
+01071,Russell,MA,0
+01072,Shutesbury,MA,0
+01073,Southampton,MA,0
+01074,South Barre,MA,0
+01075,South Hadley,MA,0
+01077,Southwick,MA,0
+01079,Thorndike,MA,0
+01080,Three Rivers,MA,0
+01081,Wales,MA,042
+01082,Ware,MA,0420
+01083,Warren,MA,04
+01084,West Chesterfie,MA,0
+01085,Westfield,MA,0
+01086,Westfield,MA,0
+01088,West Hatfield,MA,0
+01089,West Springfield,MA,0
+01090,West Springfield,MA,0
+01092,West Warren,MA,0
+01093,Whately,MA,04
+01094,Wheelwright,MA,0
+01095,Wilbraham,MA,0
+01096,Williamsburg,M
+01097,Woronoco,MA,0
+01098,Worthington,MA,0
+01101,Springfield,MA,0
+01102,Springfield,MA,0
+01103,Springfield,MA,0
+01104,Springfield,MA,0
+01105,Springfield,MA,0
+01106,Longmeadow,MA,0
+01107,Springfield,MA,0
+01108,Springfield,MA,0
+01109,Springfield,MA,0
+01111,Springfield,MA,0
+01114,Springfield,MA,0
+01115,Springfield,MA,0
+01116,Longmeadow,MA,0
+01118,Springfield,MA,0
+01119,Springfield,MA,0
+01128,Springfield,MA,0
+01129,Springfield,MA,0
+01133,Springfield,MA,0
+01138,Springfield,MA,0
+01139,Springfield,MA,0
+01144,Springfield,MA,0
+01151,Indian Orchard,MA,0
+01152,Springfield,MA,0
+01199,Springfield,MA,0
+01201,Pittsfield,MA,0
+01202,Pittsfield,MA,0
+01203,Pittsfield,MA,0
+01220,Adams,MA,0420
+01222,Ashley Falls,MA,0
+01223,Becket,MA,042
+01224,Berkshire,MA,0
+01225,Cheshire,MA,0
+01226,Dalton,MA,042
+01227,Dalton,MA,042
+01229,Glendale,MA,0
+01230,Great Barrington,MA,0
+01231,Sheffield,MA,0
+01235,Hinsdale,MA,0
+01236,Housatonic,MA,0
+01237,Lanesboro,MA,0
+01238,Lee,MA,042029
+01240,Lenox,MA,0420
+01242,Lenox Dale,MA,0
+01243,Middlefield,MA,0
+01244,Mill River,MA,0
+01245,Monterey,MA,0
+01247,North Adams,MA,0
+01252,North Egremont,MA,0
+01253,Otis,MA,04201
+01254,Richmond,MA,0
+01255,Sandisfield,MA,0
+01256,Savoy,MA,0420
+01257,Sheffield,MA,0
+01258,South Egremont,MA,0
+01259,Southfield,MA,0
+01260,South Lee,MA,0
+01262,Stockbridge,MA,0
+01263,Stockbridge,MA,0
+01264,Tyringham,MA,0
+01266,West Stockbridge,MA,0
+01267,Williamstown,MA,0
+01270,Windsor,MA,04
+01301,Greenfield,MA,0
+01302,Greenfield,MA,0
+01330,Ashfield,MA,0
+01331,Athol,MA,0420
+01337,Bernardston,MA,0
+01338,Buckland,MA,0
+01339,Charlemont,MA
+01340,Colrain,MA,04
+01341,Conway,MA,042
+01342,Deerfield,MA,0
+01343,Drury,MA,0420
+01344,Erving,MA,042
+01346,Heath,MA,0420
+01347,Lake Pleasant,MA,0
+01349,Turners Falls,MA,0
+01350,Monroe Bridge,MA,0
+01351,Montague,MA,0
+01354,Northfield,MA
+01355,New Salem,MA,0
+01360,Northfield,MA
+01364,Orange,MA,042
+01366,Petersham,MA,0
+01367,Rowe,MA,04206
+01368,Royalston,MA,0
+01369,Shattuckville,MA,0
+01370,Shelburne Falls,MA,0
+01373,South Deerfield,MA,0
+01374,Charlemont,MA,0
+01375,Sunderland,MA,0
+01376,Turners Falls,MA,0
+01378,Warwick,MA,04
+01379,Wendell,MA,04
+01380,Wendell Depot,MA,0
+01393,Whately,MA,04
+01420,Fitchburg,MA,0
+01427,Westborough,MA,0
+01430,Ashburnham,MA,0
+01431,Ashby,MA,0420
+01432,Ayer,MA,04205
+01436,Baldwinville,MA,0
+01438,East Templeton,MA,0
+01440,Gardner,MA,04
+01441,Gardner,MA,04
+01450,Groton,MA,042
+01451,Harvard,MA,04
+01452,Hubbardston,MA,0
+01453,Leominster,MA,0
+01460,Littleton,MA,0
+01462,Lunenburg,MA,0
+01463,Pepperell,MA,0
+01464,Shirley,MA,04
+01467,Still River,MA
+01468,Templeton,MA,0
+01469,Townsend,MA,0
+01470,Groton,MA,042
+01471,Groton,MA,042
+01472,West Groton,MA,0
+01473,Westminster,MA,0
+01474,West Townsend,MA,0
+01475,Winchendon,MA,0
+01477,Winchendon Springs,MA,0
+01501,Auburn,MA,042
+01503,Berlin,MA,042
+01504,Blackstone,MA,0
+01505,Boylston,MA,0
+01506,Brookfield,MA,0
+01507,Charlton,MA,0
+01508,Charlton City,MA,0
+01509,Charlton Depot,MA,0
+01510,Clinton,MA,04
+01515,East Brookfield,MA,0
+01516,Douglas,MA,04
+01517,East Princeton,MA,0
+01518,Fiskdale,MA,0
+01519,Grafton,MA,04
+01520,Holden,MA,042
+01521,Holland,MA,04
+01522,Jefferson,MA,0
+01523,Lancaster,MA,0
+01524,Leicester,MA,0
+01525,Linwood,MA,04
+01526,Manchaug,MA,0
+01527,Millbury,MA,0
+01529,Millville,MA,0
+01531,New Braintree,MA,0
+01532,Northborough,MA,0
+01534,Northbridge,MA,0
+01535,North Brookfield,MA,0
+01536,North Grafton,MA,0
+01537,North Oxford,MA,0
+01538,North Uxbridge,MA,0
+01540,Oxford,MA,042
+01541,Princeton,MA,0
+01542,Rochdale,MA,0
+01543,Rutland,MA,04
+01545,Shrewsbury,MA,0
+01546,Shrewsbury,MA,0
+01550,Southbridge,MA,0
+01560,South Grafton,MA,0
+01561,South Lancaster,MA,0
+01562,Spencer,MA,04
+01564,Sterling,MA,0
+01566,Sturbridge,MA,0
+01568,Upton,MA,0420
+01569,Uxbridge,MA,0
+01570,Webster,MA,04
+01571,Dudley,MA,042
+01580,Westborough,MA,0
+01581,Westborough,MA,0
+01582,Westborough,MA,0
+01583,West Boylston,MA,0
+01585,West Brookfield,MA,0
+01586,West Millbury,MA,0
+01588,Whitinsville,MA,0
+01590,Sutton,MA,042
+01601,Worcester,MA,0
+01602,Worcester,MA,0
+01603,Worcester,MA,0
+01604,Worcester,MA,0
+01605,Worcester,MA,0
+01606,Worcester,MA,0
+01607,Worcester,MA,0
+01608,Worcester,MA,0
+01609,Worcester,MA,0
+01610,Worcester,MA,0
+01611,Cherry Valley,MA,0
+01612,Paxton,MA,042
+01613,Worcester,MA,0
+01614,Worcester,MA,0
+01615,Worcester,MA,0
+01634,Tolland,MA,04
+01653,Worcester,MA,0
+01654,Worcester,MA,0
+01655,Worcester,MA,0
+01701,Framingham,MA,0
+01702,Framingham,MA,0
+01703,Framingham,MA,0
+01704,Framingham,MA,0
+01705,Framingham,MA,0
+01718,Village Of Nagog Wood1,MA,0
+01719,Boxborough,MA,0420
+01720,Acton,MA,042047714
+01721,Ashland,MA,0420257
+01730,Bedford,MA,0420496
+01731,Hanscom AFB,MA,042
+01740,Bolton,MA,04204370
+01741,Carlisle,MA,042052
+01742,Concord,MA,0420457
+01745,Fayville,MA,042029
+01746,Holliston,MA,04201
+01747,Hopedale,MA,042012
+01748,Hopkinton,MA,04202
+01749,Hudson,MA,04203898
+01750,Natick,MA,04202738
+01752,Marlborough,MA,042
+01754,Maynard,MA,0420430
+01756,Mendon,MA,04200920
+01757,Milford,MA,0420149
+01760,Natick,MA,04202907
+01770,Sherborn,MA,042023
+01772,Southborough,MA,04
+01773,Lincoln,MA,0420425
+01775,Stow,MA,0420423882
+01776,Sudbury,MA,0420385
+01778,Wayland,MA,0420345
+01784,Woodville,MA,04204
+01801,Woburn,MA,04204845
+01803,Burlington,MA,0420
+01805,Burlington,MA,0420
+01806,Woburn,MA,04204463
+01807,Woburn,MA,04204463
+01808,Woburn,MA,04204463
+01810,Andover,MA,0420646
+01812,Andover,MA,0420647
+01813,Woburn,MA,04204463
+01815,Woburn,MA,04204463
+01820,Pinehurst,MA,04205
+01821,BillericA,0MA,04205
+01822,BillericA,0MA,04204
+01823,Haverhill,MA,04208
+01824,Chelmsford,MA,0420
+01826,Dracut,MA,04206777
+01827,Dunstable,MA,04206
+01830,Haverhill,MA,04207
+01831,Haverhill,MA,04207
+01832,Haverhill,MA,04207
+01833,Georgetown,MA,0420
+01834,Groveland,MA,04207
+01835,Haverhill,MA,04207
+01840,Lawrence,MA,042070
+01841,Lawrence,MA,042071
+01842,Lawrence,MA,042063
+01843,Lawrence,MA,042069
+01844,Methuen,MA,0420730
+01845,North Andover,MA,0
+01850,Lowell,MA,04206557
+01851,Lowell,MA,04206309
+01852,Lowell,MA,04206341
+01853,Lowell,MA,04204463
+01854,Lowell,MA,04206497
+01856,Lowell,MA,04206417
+01860,Merrimac,MA,042083
+01862,North BillericA,0MA,0
+01863,North Chelmsford,MA,0
+01864,North Reading,MA,0
+01865,Nutting Lake,MA,04
+01866,Pinehurst,MA,04204
+01867,Reading,MA,0420525
+01876,Tewksbury,MA,04206
+01879,Tyngsboro,MA,04206
+01880,Wakefield,MA,04205
+01885,West Boxford,MA,04
+01886,Westford,MA,042059
+01887,Wilmington,MA,0420
+01888,Woburn,MA,04204463
+01889,North Reading,MA,0
+01890,Winchester,MA,0420
+01899,Andover,MA,0420635
+01901,Lynn,MA,0420461246
+01902,Lynn,MA,0420469946
+01903,Lynn,MA,0420635443
+01904,Lynn,MA,0420490421
+01905,Lynn,MA,0420464879
+01906,Saugus,MA,04204627
+01907,Swampscott,MA,0420
+01908,Nahant,MA,04204270
+01910,Lynn,MA,0420454796
+01913,Amesbury,MA,042085
+01915,Beverly,MA,0420560
+01921,Boxford,MA,0420677
+01922,Byfield,MA,0420760
+01923,Danvers,MA,0420569
+01929,Essex,MA,042063175
+01930,Gloucester,MA,0420
+01931,Gloucester,MA,0420
+01936,Hamilton,MA,042063
+01937,Hathorne,MA,042063
+01938,Ipswich,MA,0420682
+01940,Lynnfield,MA,04205
+01944,Manchester,MA,0420
+01945,Marblehead,MA,0420
+01947,Salem,MA,042064284
+01949,Middleton,MA,04206
+01950,Newburyport,MA,042
+01951,Newbury,MA,0420780
+01952,Salisbury,MA,04208
+01960,Peabody,MA,0420534
+01961,Peabody,MA,0420635
+01965,Prides Crossing,MA,0
+01966,Rockport,MA,042065
+01969,Rowley,MA,04207167
+01970,Salem,MA,042051684
+01971,Salem,MA,042063544
+01982,South Hamilton,MA,0
+01983,Topsfield,MA,04206
+01984,Wenham,MA,04206005
+01985,West Newbury,MA,04
+02018,Accord,MA,04109704
+02019,Bellingham,MA,0420
+02020,Brant Rock,MA,0420
+02021,Canton,MA,04201667
+02025,Cohasset,MA,042024
+02026,Dedham,MA,04202446
+02027,Dedham,MA,04201800
+02029,Providence,RI,410
+02030,Dover,MA,042023888
+02031,East Mansfield,MA,0
+02032,East Walpole,MA,04
+02035,Foxboro,MA,0420061
+02038,Franklin,MA,042008
+02040,Greenbush,MA,04109
+02041,Green Harbor,MA,04
+02043,Hingham,MA,0420225
+02044,Hingham,MA,0410970
+02045,Hull,MA,0420286347
+02047,Humarock,MA,042014
+02048,Mansfield,MA,04200
+02050,Marshfield,MA,0420
+02051,Marshfield Hills,MA,0
+02052,Medfield,MA,042018
+02053,Medway,MA,04201515
+02054,Millis,MA,04201663
+02055,Minot,MA,041097047
+02056,Norfolk,MA,0420111
+02059,North Marshfield,MA,0
+02060,North Scituate,MA,0
+02061,Norwell,MA,0420152
+02062,Norwood,MA,0420185
+02065,Ocean Bluff,MA,042
+02066,Scituate,MA,042020
+02067,Sharon,MA,04201137
+02070,Sheldonville,MA,04
+02071,South Walpole,MA,0
+02072,Stoughton,MA,04201
+02081,Walpole,MA,0420145
+02085,Foxborough,MA,0420
+02090,Westwood,MA,042021
+02093,Wrentham,MA,042005
+02101,Boston,MA,04203705
+02102,Boston,MA,04203389
+02103,Boston,MA,04203389
+02104,Boston,MA,04203389
+02105,Boston,MA,04203389
+02106,Boston,MA,04203543
+02107,Boston,MA,04203389
+02108,Boston,MA,04203579
+02109,Boston,MA,04203614
+02110,Boston,MA,04203565
+02111,Boston,MA,04203498
+02112,Boston,MA,04203389
+02113,Boston,MA,04203650
+02114,Boston,MA,04203617
+02115,Boston,MA,04203430
+02116,Boston,MA,04203496
+02117,Boston,MA,04203389
+02118,Boston,MA,04203387
+02119,Boston,MA,04203245
+02120,Boston,MA,04203320
+02121,Boston,MA,04203074
+02122,Boston,MA,04202962
+02123,Boston,MA,04203389
+02124,Boston,MA,04202871
+02125,Boston,MA,04203168
+02126,Mattapan,MA,042027
+02127,Boston,MA,04203349
+02128,Boston,MA,04203782
+02129,Charlestown,MA,042
+02130,Jamaica Plain,MA,0
+02131,Roslindale,MA,0420
+02132,West Roxbury,MA,04
+02133,Boston,MA,04203389
+02134,Allston,MA,0420355
+02135,Brighton,MA,042034
+02136,Hyde Park,MA,04202
+02137,Readville,MA,04203
+02138,Cambridge,MA,04203
+02139,Cambridge,MA,04203
+02140,Cambridge,MA,04203
+02141,Cambridge,MA,04203
+02142,Cambridge,MA,04203
+02143,Somerville,MA,0420
+02144,Somerville,MA,0420
+02145,Somerville,MA,0420
+02146,Brookline,MA,04203
+02147,Brookline Village,MA,0
+02148,Malden,MA,04204285
+02149,Everett,MA,0420409
+02150,ChelseA,0MA,0420396
+02151,Revere,MA,04204162
+02152,Winthrop,MA,042037
+02153,Medford,MA,0420446
+02154,Waltham,MA,0420388
+02155,Medford,MA,0420419
+02156,West Medford,MA,04
+02157,Babson Park,MA,042
+02158,Newton,MA,04203536
+02159,Newton,MA,04203160
+02160,Newton,MA,04204463
+02161,Newton,MA,04204463
+02162,Newton,MA,04203318
+02163,Boston,MA,04203679
+02164,Newton,MA,04204463
+02165,Newton,MA,04204463
+02166,Auburndale,MA,0420
+02167,Chestnut Hill,MA,0
+02168,Waban,MA,042044639
+02169,Quincy,MA,04202507
+02170,Quincy,MA,04202670
+02171,Quincy,MA,04202844
+02172,Watertown,MA,04203
+02173,Lexington,MA,04204
+02174,Arlington,MA,04204
+02175,Arlington Heights,MA,0
+02176,Melrose,MA,0420459
+02177,Melrose,MA,0420446
+02178,Belmont,MA,0420446
+02179,Waverley,MA,042044
+02180,Stoneham,MA,042048
+02181,Wellesley,MA,04203
+02184,Braintree,MA,04202
+02185,Braintree,MA,04201
+02186,Milton,MA,04202530
+02187,Milton Village,MA,0
+02188,Weymouth,MA,042021
+02189,Weymouth,MA,042021
+02190,Weymouth,MA,042017
+02191,Weymouth,MA,042024
+02192,Needham,MA,0420180
+02193,Weston,MA,04204463
+02194,Needham,MA,0420292
+02195,Newton,MA,04204463
+02196,Boston,MA,04203389
+02199,Boston,MA,04203471
+02201,Boston,MA,04203389
+02202,Boston,MA,04203610
+02203,Boston,MA,04203614
+02204,Boston,MA,04203389
+02205,Boston,MA,04203503
+02206,Boston,MA,04203389
+02207,Boston,MA,04203389
+02208,Boston,MA,04203389
+02209,Boston,MA,04203389
+02210,Boston,MA,04203479
+02211,Boston,MA,04203389
+02212,Boston,MA,04204463
+02215,Boston,MA,04203469
+02216,Boston,MA,04203389
+02217,Boston,MA,04203389
+02222,Boston,MA,04203677
+02238,Cambridge,MA,04204
+02239,Cambridge,MA,04204
+02241,Boston,MA,04203389
+02254,Waltham,MA,0420446
+02258,Newton,MA,04204463
+02266,Boston,MA,04203389
+02269,Quincy,MA,04201800
+02272,Watertown,MA,04204
+02277,Watertown,MA,04204
+02283,Boston,MA,04203389
+02284,Boston,MA,04203389
+02293,Boston,MA,04203389
+02295,Boston,MA,04203389
+02297,Boston,MA,04203389
+02301,Brockton,MA,042007
+02302,Brockton,MA,042008
+02303,Brockton,MA,041097
+02304,Brockton,MA,041097
+02305,Brockton,MA,041097
+02322,Avon,MA,0420121932
+02324,Bridgewater,MA,041
+02325,Bridgewater,MA,041
+02327,Bryantville,MA,042
+02330,Carver,MA,04108736
+02331,Duxbury,MA,0410970
+02332,Duxbury,MA,0420031
+02333,East Bridgewater,MA,0
+02334,Easton,MA,04200235
+02337,Elmwood,MA,0420022
+02338,Halifax,MA,0410999
+02339,Hanover,MA,0420128
+02341,Hanson,MA,04200594
+02343,Holbrook,MA,042014
+02344,Middleboro,MA,0410
+02345,Manomet,MA,0410888
+02346,Middleboro,MA,0410
+02347,Lakeville,MA,04108
+02348,Middleboro,MA,0410
+02349,Middleboro,MA,0410
+02350,Monponsett,MA,0420
+02351,Abington,MA,042011
+02355,North Carver,MA,04
+02356,North Easton,MA,04
+02357,North Easton,MA,04
+02358,North Pembroke,MA,0
+02359,Pembroke,MA,042006
+02360,Plymouth,MA,041089
+02361,Plymouth,MA,041097
+02362,Plymouth,MA,041097
+02363,Plymouth,MA,041095
+02364,Kingston,MA,041099
+02366,South Carver,MA,04
+02367,Plympton,MA,041096
+02368,Randolph,MA,042017
+02369,Dennis Port,MA,041
+02370,Rockland,MA,042012
+02375,South Easton,MA,04
+02379,West Bridgewater,MA,0
+02381,White Horse Beach,MA,0
+02382,Whitman,MA,0420082
+02401,Brockton,MA,042007
+02402,Brockton,MA,042008
+02403,Brockton,MA,041097
+02404,Brockton,MA,041097
+02405,Brockton,MA,041097
+02407,Scituate,MA,042013
+02420,Lexington,MA,04204
+02421,Lexington,MA,04204
+02445,Brookline,MA,04203
+02446,Brookline,MA,04203
+02447,Brookline Village,MA,0
+02451,Waltham,MA,0420393
+02452,Waltham,MA,0420392
+02453,Waltham,MA,0420370
+02454,Waltham,MA,0420356
+02456,New Town,MA,042044
+02457,Babson Park,MA,042
+02458,Newton,MA,04203547
+02459,Newton Center,MA,0
+02460,Newtonville,MA,042
+02461,Newton Highlands,MA,0
+02462,Newton Lower Falls,MA,0
+02464,Newton Upper Falls,MA,0
+02465,West Newton,MA,042
+02466,Auburndale,MA,0420
+02467,Chestnut Hill,MA,0
+02468,Waban,MA,042032524
+02471,Watertown,MA,04204
+02472,Watertown,MA,04203
+02474,Arlington,MA,04204
+02475,Arlington Heights,MA,0
+02476,Arlington,MA,04204
+02477,Watertown,MA,04204
+02478,Belmont,MA,0420391
+02479,Waverley,MA,042044
+02481,Wellesley Hills,MA,0
+02482,Wellesley,MA,04203
+02492,Needham,MA,0420278
+02493,Weston,MA,04203586
+02494,Needham,MA,0420298
+02495,Nonantum,MA,042044
+02532,Buzzards Bay,MA,04
+02534,Cataumet,MA,041066
+02535,Chilmark,MA,041034
+02536,East Falmouth,MA,0
+02537,East Sandwich,MA,0
+02538,East Wareham,MA,04
+02539,Edgartown,MA,04103
+02540,Falmouth,MA,041056
+02541,Falmouth,MA,041079
+02542,Buzzards Bay,MA,04
+02543,Woods Hole,MA,0410
+02549,Mashpee,MA,0410621
+02551,Oak Bluffs,MA,0410
+02552,MenemshA,0MA,041037
+02553,Monument Beach,MA,0
+02554,Nantucket,MA,04102
+02556,North Falmouth,MA,0
+02557,Oak Bluffs,MA,0410
+02558,Onset,MA,041074642
+02559,Pocasset,MA,041069
+02561,Sagamore,MA,041077
+02562,Sagamore Beach,MA,0
+02563,Sandwich,MA,041073
+02564,Siasconset,MA,0410
+02565,Silver Beach,MA,04
+02567,Sagamore,MA,041079
+02568,Vineyard Haven,MA,0
+02571,Wareham,MA,0410751
+02573,Vineyard Haven,MA,0
+02574,West Falmouth,MA,0
+02575,West Tisbury,MA,04
+02576,West Wareham,MA,04
+02584,Nantucket,MA,04102
+02595,West Tisbury,MA,04
+02601,Hyannis,MA,0410654
+02625,Barnstable Town,MA,0
+02630,Barnstable,MA,0410
+02631,Brewster,MA,041074
+02632,Centerville,MA,041
+02633,Chatham,MA,0410686
+02634,Centerville,MA,041
+02635,Cotuit,MA,04106250
+02636,Centerville,MA,041
+02637,Cummaquid,MA,04107
+02638,Dennis,MA,04107366
+02639,Dennis Port,MA,041
+02641,East Dennis,MA,041
+02642,Eastham,MA,0410844
+02643,East Orleans,MA,04
+02644,Forestdale,MA,0410
+02645,Harwich,MA,0410707
+02646,Harwich Port,MA,04
+02647,Hyannis Port,MA,04
+02648,Marstons Mills,MA,0
+02649,Mashpee,MA,0410613
+02650,North Chatham,MA,0
+02651,North Eastham,MA,0
+02652,North Truro,MA,042
+02653,Orleans,MA,0410777
+02654,Nantucket,MA,04105
+02655,Osterville,MA,0410
+02657,Provincetown,MA,04
+02659,South Chatham,MA,0
+02660,South Dennis,MA,04
+02661,South Harwich,MA,0
+02662,South Orleans,MA,0
+02663,South Wellfleet,MA
+02664,South Yarmouth,MA,0
+02666,Truro,MA,041099280
+02667,Wellfleet,MA,04109
+02668,West Barnstable,MA
+02669,West Chatham,MA,04
+02670,West Dennis,MA,041
+02671,West Harwich,MA,04
+02672,West Hyannisport,MA
+02673,West Yarmouth,MA,0
+02675,Yarmouth Port,MA,0
+02702,Assonet,MA,0410792
+02703,Attleboro,MA,04109
+02712,Chartley,MA,041075
+02713,Cuttyhunk,MA,04104
+02714,Dartmouth,MA,04107
+02715,Dighton,MA,0410811
+02717,East Freetown,MA,0
+02718,East Taunton,MA,04
+02719,Fairhaven,MA,04106
+02720,Fall River,MA,0410
+02721,Fall River,MA,0410
+02722,Fall River,MA,0410
+02723,Fall River,MA,0410
+02724,Fall River,MA,0410
+02725,Somerset,MA,041072
+02726,Somerset,MA,041075
+02735,Easton,MA,04109993
+02738,Marion,MA,04107065
+02739,Mattapoisett,MA,04
+02740,New Bedford,MA,041
+02741,New Bedford,MA,041
+02742,New Bedford,MA,041
+02743,Acushnet,MA,041069
+02744,New Bedford,MA,041
+02745,New Bedford,MA,041
+02746,New Bedford,MA,041
+02747,North Dartmouth,MA,0
+02748,South Dartmouth,MA,0
+02760,North Attleboro,MA,0
+02761,North Attleboro,MA,0
+02762,Plainville,MA,0420
+02763,Attleboro Falls,MA,0
+02764,North Dighton,MA,0
+02766,Norton,MA,04109691
+02767,Raynham,MA,0410934
+02768,Raynham Center,MA,0
+02769,Rehoboth,MA,041083
+02770,Rochester,MA,04107
+02771,Seekonk,MA,0410843
+02777,SwanseA,0MA,0410741
+02779,Berkley,MA,0410825
+02780,Taunton,MA,0410904
+02781,Westport,MA,041052
+02783,Taunton,MA,0410756
+02790,Westport,MA,041060
+02791,Westport Point,MA,0
+05501,Andover,MA,0420647
+05544,Andover,MA,0420647
