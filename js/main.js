@@ -290,6 +290,7 @@ function updateVisualization() {
             });
         }).entries(tempWorldLineData);
     tempWorldLineData.forEach(function(d) {
+        d.Country = "World";
         d.Category = d.key;
         d.Value = d.values;
     });
@@ -312,7 +313,7 @@ function updateVisualization() {
         }
     });
 
-
+console.log(tempWorldLineData);
 
 
     // Update Visualization
@@ -333,12 +334,24 @@ function updateVisualization() {
 
     // Update Visualization Proper
     worldLineLine
+        .defined(function(d){return d.Value;})
         .x(function(d) {
             return worldLineXScale(d.Category);
         })
         .y(function(d) {
+            console.log(d.Value);
             return worldLineYDollarScale(d.Value);
         });
+
+    /*var dataNest = d3.nest()
+        .key(function(d){return d.Country;})
+        .entries(tempWorldLineData);
+
+    dataNest.forEach(function(d){
+        worldLineSvg.append("path")
+            .attr("class", "line")
+            .attr("d", worldLineLine);
+    });*/
 
     worldLinePath
         .datum(tempWorldLineData)
