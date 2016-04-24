@@ -6,21 +6,112 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <div class="container">
-        <header class="row">
+        <div class="text-center">
+            <h1>Waste matters!</h1>
+            <p class="lead">
+Understanding food waste on the global, local and personal level.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-11" id="p1">
+
+                <img src="img/Pic1.jpg">
+            </div>
+        </div>
+
+
+
+<!--        <header class="row">
             <div class="col-xs-12">
                 <img src="img/header.png">
             </div>
-        </header>
+        </header>-->
+
+
+
+
         <main class="row">
             <div class="col-xs-12">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h3 class="center">FOOD WASTE - IS EVERYONE’S BUSINESS</h3>
+                        <br>
+                        <p class="lead">
+                            <strong>Food Waste:</strong> is everyone's business.
+                        </p>
                     </div>
+
+
+
                     <div class="col-xs-12">
+                        Food waste is one of the most pressing issues our planet is facing in these days.
+                        Since cheap food has become more accessible than ever, the amount of wasted food
+                        has increased enormously. In fact, about 1.3 Gigatonnes of food waste are produced worldwide every year.
+                        In this article we discuss the problem of food waste from a global, local and personal perspective.
+                        We begin by discussing what countries on a global scale produce most waste
+                        and which products are most often thrown away.
+                        In the second step, we will break our results down to a local level and
+                        discuss the food waste problem in Massachusetts.
+                        Here we will identify the top waste producing counties as well as their top waste producers.
+                        Finally, we will discuss how everyone of us can make a huge impact
+                        on the food waste problem via food banks.
+                    </div>
+
+                    <div class="col-xs-12">
+                        <br>
+                        <p class="lead">
+                            <strong>Food Waste:</strong> a global problem.
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <ul>
+                            <li>How much food is wasted worldwide, by country?</li>
+                            <li>Which types of foods are most wasted?</li>
+                            <li>What are the temporal trends in food waste?</li>
+                            <li>How does a country's average income correlate with food waste?</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-xs-6">
+                        <img src="img/Pic2.jpg">
+                    </div>
+
+                    <div class="col-xs-6">
+                        <br>
+                        <br>
+                        About 1/3 of the total food produced globally goes to waste, and this is costing the world approximately USD 750 billion.! For example, in America it’s estimated that 1860000 tones of food were wasted in 2011.
+                        This corresponds to 6000 airplanes with cargo- putting them together they will create a line long enough to cover the distance BOSTON - PARIS.
+                        However, some countries waste more food than others - many factors come into play.
+                        One of these factors is income, another one is expense on food.
+                        Naturally we expect, that these factors must be directly correlated to food waste.
+                        After all, the more money you have, the more you can spend on food and the more food potentially goes to waste.
+                        In the visualization below we present a data-based analysis of this hypothesis.
+                        Furthermore we analyze the amount of food wasted per country via a choropleth map
+                        and show how food waste for different product types evolve over time.
+
+                    </div>
+
+                    <div class="col-xs-12">
+                        The way the visualization works is very simple: First, choose a type food category
+                        that you are interested. Then select a time interval. All graphs will automatically
+                        adapt to your choice. First, the choropleth world map will show you the total global distribution
+                        of waste for you chosen category for the the time intervall you have chosen.
+                        Second, the line chart shows you how the total worldwide foodwaste for your chosen
+                        period relates to average income and to average expense on food.
+                        Finally you can detect temporal trends in the waste for your chosen category via
+                        the stacked area chart.
+
+                    </div>
+
+
+                        <!--<div class="col-xs-12">
+
                         <h4>Main Quesitons:</h4>
                         <table class="table table-bordered table-striped">
                             <thead>
@@ -70,15 +161,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="row">
-                    <div class="col-xs-12">
-                        <h3>Food Waste as a Global Problem</h3>
-                        <p>It’s estimated that 1.3 Gtonnes of edible food are wasted world wide, and this is costing the world approximately USD 750 billion.</p>
-                        <p>Overall, on a per-capita basis, much more food is wasted in the industrialized world than in developing countries.</p>
-                        <p>Cereals (excluding beer) are the biggest contributor to food waste. Did you know that - <i>cereals provide more food energy worldwide than any other type of crop?</i></p>
-                    </div>
                     <div class="col-xs-12">
                         <div id="worldMap"></div>
                         <div id="colorScale"></div>
@@ -124,19 +209,87 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-xs-12">
+                        <br>
+                        Our main findings are the following: First, on a per-capita basis, much more food is wasted in the industrialized world than in developing countries.
+                        Second, cereals and high calory foods are the biggest contributor to food waste.
+                        (Did you know that - <i>cereals provide more food energy worldwide than any other type of crop?</i>)
+                        Third, Food waste is not static; across the years levels of food wasted per country have changed, as well per food type.
+                        And finally, countries with higher average income tend to waste more food.
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <h3>Food Waste as a Local Problem</h3>
+                        <br>
+                        <br>
+                        <p class="lead">
+                            <strong>Food Waste:</strong> a local problem.
+                        </p>
                     </div>
-                    <div class="col-xs-6">
+
+
+                    <div class="col-xs-12">
+                        <ul>
+                            <li>What are the main contributors to food waste in Massachusetts?</li>
+                            <li>What are their absolute and relative contributions to the total food waste?</li>
+                            <li>Which counties and zip code areas of Massachusetts produce the most food waste?</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-xs-12">
+                        Food waste is not only a global problem. It is also a critical local issue in the state of Massachusetts.
+                        On this local level there are a large variety of different contributors to food waste
+                        ranging from restaurant, to universities, to supermarkets and many more.
+                        Also the different counties and zip code areas of Massachusetts contribute differently to the total food waste.
+                        An interesting task is to analyze these different contributions based on data.
+                        For that purpose we have created the visualization below.
+                        In the choropleth map on the right you can see the absolute waste contributions of
+                        different institutions, such as universities, hospitals, grocery stores and so on.
+                        It also allows you to determine which regions (or more explicitly zip code areas) contribute most of the waste.
+                        The sunburst chart on the left gives an insight into relative waste contributions.
+                        It allows you to figure out the percentage of how much different institutions, counties
+                        and zip code regions contribute to the total waste.
+                    </div>
+
+                    <!--<div class="col-xs-6">
                         <p>In America it’s estimated that 1860000 tones of food were wasted in 2011. Image 6000 airplanes with cargo- putting them together they will create a line long enough to cover the distance BOSTON - PARIS.</p>
                         <img src="img/local.png">
                         <p>Consumer and foodservice food waste is the largest source of food waste, this includes restaurants, universities and hospitals. This issue happens in all countries and in all cities, including your city. Discover the main contributors of food waste in Boston.</p>
-                    </div>
-                    <div class="col-xs-6">
-                        <div id="massMap"></div>
-                        <label for="Selector">Data: </label>
+                    </div>-->
+
+                    <!--<div class="col-sm-4" id="massMapm">
+
+                        <form class="form-inline">
+                            <div class="form-group">
+
+                                <label for="Selector">Data: </label>
+                                <select class="form-control" id="selector">
+                                    <option value="Waste">Total Waste</option>
+                                    <option value="F">Waste of Food and Beverage Manufacturers/Processors</option>
+                                    <option value="W">Waste of Wholesale Distributors</option>
+                                    <option value="IH">Waste of Healthcare Facilities</option>
+                                    <option value="IS">Waste of Independent Schools</option>
+                                    <option value="IC">Waste of Colleges/Universities</option>
+                                    <option value="IP">Waste of Correctional Facilities</option>
+                                    <option value="C">Waste of Resorts and Conference Facilities</option>
+                                    <option value="G">Waste of Resorts and Restaurants</option>
+                                    <option value="R">Waste of Supermarkets and Grocery Stores</option>
+                                </select>
+
+                            </div>
+                        </form>
+
+                    </div>-->
+
+
+
+
+<!--                    <div class="col-sm-4" id="massMap">
+                        <form class="form-inline">
+                            <div class="form-group">
+
+                            <label for="Selector">Data: </label>
                         <select class="form-control" id="selector">
                             <option value="Waste">Total Waste</option>
                             <option value="F">Waste of Food and Beverage Manufacturers/Processors</option>
@@ -149,9 +302,157 @@
                             <option value="G">Waste of Resorts and Restaurants</option>
                             <option value="R">Waste of Supermarkets and Grocery Stores</option>
                         </select>
+
+                            </div>
+                        </form>
+
                     </div>
+                </div>-->
+
+
+                    <div class="row">
+                        <div class="col-xs-7" id="p1">
+                            <div id="main">
+                                <div id="sequence"></div>
+                                <div id="chart">
+                                    <div id="explanation" style="visibility: hidden;">
+                                        <span id="percentage"></span><br/>
+                                        of Massachusetts Total Food Waste
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5" id="massMapm">
+
+                            <form class="form-inline">
+                                <div class="form-group">
+
+                                    <label for="Selector">Data: </label>
+                                    <select class="form-control" id="selector">
+                                        <option value="Waste">Total Waste</option>
+                                        <option value="F">Waste of Food and Beverage Manufacturers/Processors</option>
+                                        <option value="W">Waste of Wholesale Distributors</option>
+                                        <option value="IH">Waste of Healthcare Facilities</option>
+                                        <option value="IS">Waste of Independent Schools</option>
+                                        <option value="IC">Waste of Colleges/Universities</option>
+                                        <option value="IP">Waste of Correctional Facilities</option>
+                                        <option value="C">Waste of Resorts and Conference Facilities</option>
+                                        <option value="G">Waste of Resorts and Restaurants</option>
+                                        <option value="R">Waste of Supermarkets and Grocery Stores</option>
+                                    </select>
+
+                                </div>
+                            </form>
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
                 </div>
-                <div class="row">
+
+
+                        Our conclusions from this analysis are twofold: First,
+                        we determined that the main contributions to the total waste come
+                        from restaurant, followed by supermarkets and food manufacturers.
+                        Second, we find that urban areas, such as Boston, contribute highly to the food waste.
+                        This is only to be expected due to the high density of restaurants, supermarkets
+                        and colleges which all contribute a great deal to the total waste.
+
+                <div class="col-xs-12">
+                    <br>
+                    <br>
+                    <p class="lead">
+                        <strong>Food Waste:</strong> a personal problem.
+                    </p>
+                </div>
+
+                <div class="col-xs-12">
+                    Food waste has an ecological and economical impact that permeates through all aspects of our life.
+                    There is a lot you can do to reduce the amount of food waste you and your close ones produce. Here are some ideas:
+                </div>
+
+                <div class="col-xs-12">
+
+                </div>
+
+
+                <div class="col-xs-12">
+                    <ul>
+                        <li><strong>Shop Wisely</strong> - plan your meals, try not to fall for impulse buys that you will later throw away.</li>
+                        <li><strong>Eat leftovers</strong> - there is nothing wrong with asking for a doggy bag after eating out - you can enjoy it later or the next day.</li>
+                        <li><strong>Donate Food:</strong> you can donate that extra food instead of throwing it away to food banks or food pantries.</li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12">
+                    Especially, the last point of sharing your food at food banks can be highly effective.
+                    There are many institutions like these close to you, check this map to find the closest to you.
+                    You can also encourage your friends and family to donate theirs.
+                    <br>
+                    <br>
+                </div>
+
+
+
+                <div class="col-xs-6">
+                    <div id="bostonMap"></div>
+                </div>
+
+
+
+                <div class="col-xs-12">
+                    <br>
+                    <br>
+                    <p class="lead">
+                        <strong>Food Waste:</strong> conclusions.
+                    </p>
+                </div>
+
+
+                <div class="col-xs-12">
+                    In this article we have discussed the topic of food waste.
+                    The problem itself is highly important and timely, since
+                    the amount of wasted food is dramatically increasing over the recent years.
+                    In more detail, we have explored the different facets of the topic on the global, local and personal level.
+                    First, on the global level we have compared the food waste produced by different
+                    countries and analyzed its temporal evolution.
+                    Second, on the local level we have discussed the different contributors to food waste
+                    by picking the state of Massachusetts as an example.
+                    Finally, we gave explicit recommendations how everyone can reduce her or his personal food waste.
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="lead">
+                        References used to create the visualizations:
+                    </p>
+
+                    <div class="list-group">
+                        <a href="https://bl.ocks.org/kerryrodden/7090426" class="list-group-item">Kerry Rodden: Sequences sunburst</a>
+                        <a href="http://stackoverflow.com/questions/24582083/improving-d3-sequence-sunburst-example" class="list-group-item">Improving D3 Sequence Sunburst Example</a>
+                        <a href="http://bl.ocks.org/KoGor/5685876" class="list-group-item"> http://bl.ocks.org: Russia choropleth example</a>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+        </main>
+
+
+                <!--<div class="row">
                     <div class="col-xs-12">
                         <h3>Food Waste as a Personal Problem</h3>
                     </div>
@@ -160,7 +461,7 @@
                         <img src="img/personal.png">
                         <p>Food waste has an ecological and economical impact that permeates through all aspects of our life.</p>
                         <p>You can help to turn it around, by taking some small steps - and STOP WASTING FOOD.</p>
-                        <p>There is a lot you can do to reduce the amount of food waste you and your close ones produce.  Some tips for you:</p>
+                        <p>There is a lot you can doto reduce the amount of food waste you and your close ones produce.  Some tips for you:</p>
                         <p><strong>Shop Wisely</strong> - plan your meals, try not to fall for impulse buys that you will later throw away.</p>
                         <p><strong>Buy fruit and vegetables of all size and colors</strong> - a lot of fruits and vegetables go to waste because they don’t look like in the magazines, but even funny looking ones taste delicious.</p>
                         <p><strong>Eat leftovers</strong> - there is nothing wrong with asking for a doggy bag after eating out - you can enjoy it later or the next day.</p>
@@ -168,12 +469,10 @@
                         <p><strong>There are many institutions like these close to you, check this map to find the closest to you. </strong></p>
                         <p>You can also encourage your friends and family to donate theirs.</p>
                     </div>
-                    <div class="col-xs-6">
-                        <div id="bostonMap"></div>
-                    </div>
+
                 </div>
-            </div>
-        </main>
+            </div>-->
+
         <footer class="row">
             <div class="col-xs-12">
                 <p>Copyright &copy; 2016 CS171 Studio 1 Team 6</p>
@@ -190,5 +489,6 @@
     <script src="js/d3.tip.js"></script>
     <script src="js/main.js"></script>
     <script src="js/local.js"></script>
+    <script src="js/sunburst.js"></script>
 </body>
 </html>

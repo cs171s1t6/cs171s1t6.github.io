@@ -64,3 +64,71 @@ path {
     stroke-width: 0.5px;
     fill: grey;
 }
+
+
+
+
+
+/****************/
+/*  SUNBURST CHART  */
+/****************/
+
+
+
+
+#main {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #fff;
+    height: 700px;
+    margin-top: 10px;
+    float: left;
+    width: 400px;
+}
+
+#sidebar {
+    float: right;
+    width: 100px;
+}
+
+#sequence {
+    font-size: 10px;
+    width: 600px;
+    height: 70px;
+}
+
+#legend {
+    padding: 10px 0 0 3px;
+}
+
+#sequence text, #legend text {
+    font-weight: 600;
+    fill: #fff;
+}
+
+#chart {
+    position: absolute;
+    top: 80px;
+    left: -60px;
+
+}
+
+#chart path {
+    stroke: #fff;
+}
+
+#explanation {
+    font-size: 12px;
+position: absolute;
+top: 210px;
+left: 280px;
+/*width: 240px;*/
+text-align: center;
+color: #666;
+/*z-index: -1;*/
+}
+
+#percentage {
+    font-size: 2.5em;
+}

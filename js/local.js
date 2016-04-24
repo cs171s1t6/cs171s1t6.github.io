@@ -14,12 +14,12 @@
  * #######################################################################################################
  * */
 
-var margin = {top: 20, right: 120, bottom: 20, left: 120},
-    width = 1200 - margin.right - margin.left,
+var margin = {top: 20, right: 170, bottom: 20, left: 0},
+    width = 800 - margin.right - margin.left,
     height = 500 - margin.top - margin.bottom;
 
 
-var svg = d3.select("#massMap").append("svg")
+var svg = d3.select("#massMapm").append("svg")
     .attr("width", width)
     .attr("height", height)
     .style("margin", "10px auto");
@@ -45,7 +45,8 @@ var div = d3.select("body").append("div")
  * */
 
 var color = d3.scale.threshold()
-    .range(["#fee5d9", "#fcbba1", "#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]);
+    .range(["#edf8e9","#74c476","#41ab5d","#238b45","#006d2c","#00441b"]);
+
 
 
 /*
@@ -57,8 +58,8 @@ var color = d3.scale.threshold()
  * */
 
 var projection = d3.geo.mercator()
-    .center([-70.4,42])
-    .scale(8500)
+    .center([-69.7,42])
+    .scale(7500)
     .rotate([0,0]);
 
 var path = d3.geo.path()
@@ -345,16 +346,16 @@ function loadData() {
             };
 
             labelCollection = {
-                Waste: [0,(maxCollection['MaxWaste']/4),(maxCollection['MaxWaste']/2),(3*maxCollection['MaxWaste']/4),maxCollection['MaxWaste']],
-                F: [0,(maxCollection['FMaxWaste']/4),(maxCollection['FMaxWaste']/2),(3*maxCollection['FMaxWaste']/4),maxCollection['FMaxWaste']],
-                W: [0,(maxCollection['WMaxWaste']/4),(maxCollection['WMaxWaste']/2),(3*maxCollection['WMaxWaste']/4),maxCollection['WMaxWaste']],
-                IH: [0,(maxCollection['IHMaxWaste']/4),(maxCollection['IHMaxWaste']/2),(3*maxCollection['IHMaxWaste']/4),maxCollection['IHMaxWaste']],
-                IS: [0,(maxCollection['ISMaxWaste']/4),(maxCollection['ISMaxWaste']/2),(3*maxCollection['ISMaxWaste']/4),maxCollection['ISMaxWaste']],
-                IC: [0,(maxCollection['ICMaxWaste']/4),(maxCollection['ICMaxWaste']/2),(3*maxCollection['ICMaxWaste']/4),maxCollection['ICMaxWaste']],
-                IP: [0,(maxCollection['IPMaxWaste']/4),(maxCollection['IPMaxWaste']/2),(3*maxCollection['IPMaxWaste']/4),maxCollection['IPMaxWaste']],
-                C: [0,(maxCollection['CMaxWaste']/4),(maxCollection['CMaxWaste']/2),(3*maxCollection['CMaxWaste']/4),maxCollection['CMaxWaste']],
-                G: [0,(maxCollection['GMaxWaste']/4),(maxCollection['GMaxWaste']/2),(3*maxCollection['GMaxWaste']/4),maxCollection['GMaxWaste']],
-                R: [0,(maxCollection['RMaxWaste']/4),(maxCollection['RMaxWaste']/2),(3*maxCollection['RMaxWaste']/4),maxCollection['RMaxWaste']]
+                Waste: [0,(maxCollection['MaxWaste']/4).toPrecision(4),(maxCollection['MaxWaste']/2).toPrecision(4),(3*maxCollection['MaxWaste']/4).toPrecision(4),maxCollection['MaxWaste'].toPrecision(4)],
+                F: [0,(maxCollection['FMaxWaste']/4).toPrecision(4),(maxCollection['FMaxWaste']/2).toPrecision(4),(3*maxCollection['FMaxWaste']/4).toPrecision(4),maxCollection['FMaxWaste'].toPrecision(4)],
+                W: [0,(maxCollection['WMaxWaste']/4).toPrecision(4),(maxCollection['WMaxWaste']/2).toPrecision(4),(3*maxCollection['WMaxWaste']/4).toPrecision(4),maxCollection['WMaxWaste'].toPrecision(4)],
+                IH: [0,(maxCollection['IHMaxWaste']/4).toPrecision(4),(maxCollection['IHMaxWaste']/2).toPrecision(4),(3*maxCollection['IHMaxWaste']/4).toPrecision(4),maxCollection['IHMaxWaste'].toPrecision(4)],
+                IS: [0,(maxCollection['ISMaxWaste']/4).toPrecision(4),(maxCollection['ISMaxWaste']/2).toPrecision(4),(3*maxCollection['ISMaxWaste']/4).toPrecision(4),maxCollection['ISMaxWaste'].toPrecision(4)],
+                IC: [0,(maxCollection['ICMaxWaste']/4).toPrecision(4),(maxCollection['ICMaxWaste']/2).toPrecision(4),(3*maxCollection['ICMaxWaste']/4).toPrecision(4),maxCollection['ICMaxWaste'].toPrecision(4)],
+                IP: [0,(maxCollection['IPMaxWaste']/4).toPrecision(4),(maxCollection['IPMaxWaste']/2).toPrecision(4),(3*maxCollection['IPMaxWaste']/4).toPrecision(4),maxCollection['IPMaxWaste'].toPrecision(4)],
+                C: [0,(maxCollection['CMaxWaste']/4).toPrecision(4),(maxCollection['CMaxWaste']/2).toPrecision(4),(3*maxCollection['CMaxWaste']/4).toPrecision(4),maxCollection['CMaxWaste'].toPrecision(4)],
+                G: [0,(maxCollection['GMaxWaste']/4).toPrecision(4),(maxCollection['GMaxWaste']/2).toPrecision(4),(3*maxCollection['GMaxWaste']/4).toPrecision(4),maxCollection['GMaxWaste'].toPrecision(4)],
+                R: [0,(maxCollection['RMaxWaste']/4).toPrecision(4),(maxCollection['RMaxWaste']/2).toPrecision(4),(3*maxCollection['RMaxWaste']/4).toPrecision(4),maxCollection['RMaxWaste'].toPrecision(4)]
             };
 
 
@@ -378,23 +379,22 @@ function loadData() {
 * */
 
 
-            var Choice = "Waste";
 
 
-            updateLocalVisualization(Choice);
 
-/*
- * #######################################################################################################
 
-7) Update Visualization according to choice of user
+            // --> UPDATE VISUALIZATION
 
- * #######################################################################################################
-* */
+            updateLocalVisualization("Waste");
+
+
+
+            // --> UPDATE VISUALIZATION ACCORDING TO CHOICE OF THE USER
 
 
             d3.select("#selector").on("change",
                 function() {
-                    Choice = d3.select("#selector").property("value");
+                    var Choice = d3.select("#selector").property("value");
                     updateLocalVisualization(Choice);
                 }
             );
@@ -404,7 +404,6 @@ function loadData() {
 
 
 }
-
 
 /*
  * *******************************************************************************************************
@@ -468,7 +467,7 @@ function updateLocalVisualization(option) {
 * */
 
 
-    console.log(geodata.objects.ma);
+
 
 
     g.selectAll("path")
@@ -512,7 +511,7 @@ function updateLocalVisualization(option) {
                 div.text("No Data")
             }
             else{
-                div.text(dataCollection[option][d.properties.zip] + "tons")
+                div.text(dataCollection[option][d.properties.zip].toPrecision(4) + " tons")
             }
 
              div.style("left", (d3.event.pageX) + "px")
@@ -557,7 +556,7 @@ function updateLocalVisualization(option) {
 
     legend.append("rect")
         .attr("x", 20)
-        .attr("y", function(d, i){ return height - (i*height2) - 2*height2;})
+        .attr("y", function(d, i){ return height - (i*height2) - 2*height2-20;})
         .attr("width", width2)
         .attr("height", height2)
         .style("fill", function(d, i) { return color(d);
@@ -566,7 +565,7 @@ function updateLocalVisualization(option) {
 
     legend.append("text")
         .attr("x", 55)
-        .attr("y", function(d, i){ return height - (i*height2) - height2 - 8;})
-        .text(function(d, i){ return labelCollection[option][i];
+        .attr("y", function(d, i){ return height - (i*height2) - height2-28;})
+        .text(function(d, i){ return labelCollection[option][i]+ " tons";
         });
 }

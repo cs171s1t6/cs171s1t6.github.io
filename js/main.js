@@ -136,7 +136,6 @@ var worldLineData;
 var worldAreaData;
 var worldMapData;
 var worldMapColorDomain;
-var selectedCountries = [];
 
 
 
@@ -227,26 +226,12 @@ function updateVisualization() {
 
 
 
-    // Country Filtering
-    //selectedCountries = [];
-
-    console.log(selectedCountries);
-    if(selectedCountries.length > 0){
-        tempWorldLineData = worldLineData.filter(function(d){
-            return selectedCountries.indexOf(d.CountryCode) >= 0;
-        });
-    } else {
-        tempWorldLineData = worldLineData;
-    }
-
-
-
     // Year Filtering
     var yearSelectionMin = $("#yearRangeSelector").slider( "values", 0 );
     var yearSelectionMax = $("#yearRangeSelector").slider( "values", 1 );
 
 
-    tempWorldLineData = tempWorldLineData.filter(function(d){
+    tempWorldLineData = worldLineData.filter(function(d){
         return d.Year >= yearSelectionMin && d.Year <= yearSelectionMax;
     });
 
@@ -290,7 +275,6 @@ function updateVisualization() {
             });
         }).entries(tempWorldLineData);
     tempWorldLineData.forEach(function(d) {
-        d.Country = "World";
         d.Category = d.key;
         d.Value = d.values;
     });
@@ -313,7 +297,7 @@ function updateVisualization() {
         }
     });
 
-console.log(tempWorldLineData);
+
 
 
     // Update Visualization
@@ -334,24 +318,12 @@ console.log(tempWorldLineData);
 
     // Update Visualization Proper
     worldLineLine
-        .defined(function(d){return d.Value;})
         .x(function(d) {
             return worldLineXScale(d.Category);
         })
         .y(function(d) {
-            console.log(d.Value);
             return worldLineYDollarScale(d.Value);
         });
-
-    /*var dataNest = d3.nest()
-        .key(function(d){return d.Country;})
-        .entries(tempWorldLineData);
-
-    dataNest.forEach(function(d){
-        worldLineSvg.append("path")
-            .attr("class", "line")
-            .attr("d", worldLineLine);
-    });*/
 
     worldLinePath
         .datum(tempWorldLineData)
@@ -404,9 +376,6 @@ console.log(tempWorldLineData);
         .enter()
         .append("path")
         .attr("d", worldMapPath)
-        .attr("countrycode", function(d){
-            return d.id;
-        })
         .style("fill", function(d) {
 
             // --> CHECK IF DATA IS A VALID NUMBER
@@ -438,29 +407,6 @@ console.log(tempWorldLineData);
                 .style("opacity", 1);
             div.transition().duration(300)
                 .style("opacity", 0);
-        })
-        .on("click", function(){
-            // Fix This Line
-            d3.select(this).transition().duration(300).style("stroke-width", "2px");
-            //--------------
-
-            var tempCountry = d3.select(this);
-
-            console.log(tempCountry);
-
-            var selectedCountry = selectedCountries.indexOf(tempCountry.attr("countrycode"));
-            console.log(selectedCountry);
-            if(selectedCountry >= 0){
-                selectedCountries.splice(selectedCountry, 1);
-                console.log("Remove");
-                console.log(tempCountry);
-            } else {
-                selectedCountries.push(tempCountry.attr("countrycode"));
-                console.log("Add");
-                console.log(tempCountry);
-            }
-
-            updateVisualization();
         })
     ;
 
