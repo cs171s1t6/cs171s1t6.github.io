@@ -54,7 +54,7 @@ var worldLineYDollarScale = d3.scale.linear()
 var worldAreaXScale = d3.scale.linear()
     .range([0, worldAreaWidth]);
 var worldAreaYScale = d3.scale.linear()
-    .domain([0,805653])
+    .domain([0,500000000])
     .range([worldAreaHeight, 0]);
 var worldAreaCategoryScale = d3.scale.category20();
     var worldAreaCategoryScaleFullDomain;
@@ -134,8 +134,10 @@ var div = d3.select("body").append("div")
 // Declare data variables
 var worldLineData;
 var worldAreaData;
+var worldAreaProductMax;
 var worldMapData;
 var worldMapColorDomain;
+var selectedCountries = [];
 
 
 
@@ -156,8 +158,8 @@ function loadData() {
 
 // Load CSV file
 function loadWorldLineData() {
-    d3.csv("data/worldLineData.csv", function(error, csv) {
-
+    //d3.csv("data/worldLineData.csv", function(error, csv) {
+    d3.csv("data/worldChartData.csv", function(error, csv) {
         csv.forEach(function(d){
             // Convert numeric values to 'numbers'
             d.Year = +d.Year;
@@ -165,31 +167,17 @@ function loadWorldLineData() {
         });
 
         worldLineData = csv;
+
+
+        worldAreaData = csv.filter(function(d){
+            return d.Category == "Waste" && d.Type != "Total" && d.Type != "Null";
+        });
+        worldAreaCategoryScale.domain(["Cereals - Excluding Beer", "Starchy Roots", "Vegetables", "Fruits - Excluding Wine", "Sugar Crops", "Oilcrops", "Vegetable Oils", "Pulses", "Treenuts", "Alcoholic Beverages"]);
+        worldAreaCategoryScaleFullDomain = worldAreaCategoryScale.domain();
+
         worldMapData = csv.filter(function(d){
             return d.Category == "Waste";
         });
-
-        // Daisy Chain loading of next data set
-        loadWorldAreaData()
-    });
-}
-function loadWorldAreaData() {
-    d3.csv("data/worldAreaData.csv", function(error, data) {
-        if (error) throw error;
-
-        worldAreaCategoryScale.domain(d3.keys(data[0]).filter(function (key) {
-            return key !== "Year";
-        }));
-        worldAreaCategoryScaleFullDomain = worldAreaCategoryScale.domain();
-
-        data.forEach(function (d) {
-            d.Year = +d.Year;
-            worldAreaCategoryScale.domain().forEach(function(e){
-                d[e] = +d[e];
-            })
-        });
-
-        worldAreaData = data;
 
 
         // Daisy Chain loading of next data set
@@ -226,16 +214,34 @@ function updateVisualization() {
 
 
 
+    // Country Filtering
+    //selectedCountries = [];
+
+    console.log(selectedCountries);
+    if(selectedCountries.length > 0){
+        tempWorldLineData = worldLineData.filter(function(d){
+            return selectedCountries.indexOf(d.CountryCode) >= 0;
+        });
+        tempWorldAreaData = worldAreaData.filter(function(d){
+            return selectedCountries.indexOf(d.CountryCode) >= 0;
+        });
+    } else {
+        tempWorldLineData = worldLineData;
+        tempWorldAreaData = worldAreaData;
+    }
+
+
+
     // Year Filtering
     var yearSelectionMin = $("#yearRangeSelector").slider( "values", 0 );
     var yearSelectionMax = $("#yearRangeSelector").slider( "values", 1 );
 
 
-    tempWorldLineData = worldLineData.filter(function(d){
+    tempWorldLineData = tempWorldLineData.filter(function(d){
         return d.Year >= yearSelectionMin && d.Year <= yearSelectionMax;
     });
 
-    tempWorldAreaData = worldAreaData.filter(function(d){
+    tempWorldAreaData = tempWorldAreaData.filter(function(d){
         return d.Year >= yearSelectionMin && d.Year <= yearSelectionMax;
     });
 
@@ -248,15 +254,24 @@ function updateVisualization() {
 
     // Product Filtering
     var productSelection = d3.select("#productValues").property("value");
-
     var productSelectionClass = productSelection.replace(/\s+/g, '');
-    worldAreaSvg.selectAll(".worldAreaProduct:not(."+productSelectionClass+")").remove();
 
+    // Reset Area data
+    worldAreaSvg.selectAll(".worldAreaProduct:not(."+productSelectionClass+")").remove();
     worldAreaCategoryScale.domain(worldAreaCategoryScaleFullDomain);
+    worldAreaProductMax = 0;
 
     // Filter by user selection if necessary
     if(productSelection != "All"){
+        tempWorldLineData = tempWorldLineData.filter(function(d){
+            return d.Type == productSelection;
+        });
+
         worldAreaCategoryScale.domain(worldAreaCategoryScale.domain().filter(function(d) {if(d == productSelection){return d;}}));
+
+        tempWorldMapData = tempWorldMapData.filter(function(d){
+            return d.Type == productSelection;
+        });
     }
 
 
@@ -275,9 +290,26 @@ function updateVisualization() {
             });
         }).entries(tempWorldLineData);
     tempWorldLineData.forEach(function(d) {
+        d.Country = "World";
         d.Category = d.key;
         d.Value = d.values;
     });
+
+    tempWorldAreaData = d3.nest()
+        .key(function(d){
+            return d.Year;
+        })
+        .key(function(d){
+            return d.Type;
+        })
+        .rollup(function(d){
+            return d3.sum(d, function(g){
+                if(g.Value > -1) {
+                    return g.Value;
+                }
+            });
+        }).entries(tempWorldAreaData);
+
 
     tempWorldMapData = d3.nest()
         .key(function(d){
@@ -299,7 +331,6 @@ function updateVisualization() {
 
 
 
-
     // Update Visualization
 
     // Update scales
@@ -308,7 +339,7 @@ function updateVisualization() {
         return d.Value;
     })]);
 
-    worldAreaXScale.domain(d3.extent(tempWorldAreaData, function(d) { return d.Year; }));
+    worldAreaXScale.domain(d3.extent(tempWorldAreaData, function(d) { return d.key; }));
 
     worldMapColorDomain = [0,(tempWorldMapMaxWaste/4),(tempWorldMapMaxWaste/2),(3*tempWorldMapMaxWaste/4),tempWorldMapMaxWaste];
     worldMapColorScale.domain(worldMapColorDomain);
@@ -318,12 +349,24 @@ function updateVisualization() {
 
     // Update Visualization Proper
     worldLineLine
+        .defined(function(d){return d.Value;})
         .x(function(d) {
             return worldLineXScale(d.Category);
         })
         .y(function(d) {
+            console.log(d.Value);
             return worldLineYDollarScale(d.Value);
         });
+
+    /*var dataNest = d3.nest()
+        .key(function(d){return d.Country;})
+        .entries(tempWorldLineData);
+
+    dataNest.forEach(function(d){
+        worldLineSvg.append("path")
+            .attr("class", "line")
+            .attr("d", worldLineLine);
+    });*/
 
     worldLinePath
         .datum(tempWorldLineData)
@@ -331,17 +374,24 @@ function updateVisualization() {
         .duration(800)
         .attr("d", worldLineLine);
 
-
-
+    console.log(tempWorldAreaData);
+    console.log(worldAreaCategoryScale.domain());
     tempWorldAreaData = worldAreaStack(worldAreaCategoryScale.domain().map(function(name) {
+
         return {
             name: name,
             values: tempWorldAreaData.map(function(d) {
-                return {date: d.Year, y: d[name]};
+                return {date: d.key, y: d.values[d.values.map(function(e){ return e.key; }).indexOf(name)].values};
             })
         };
     }));
-
+    tempWorldAreaData[tempWorldAreaData.length - 1].values.forEach(function(d) {
+        if(d.y0 + d.y > worldAreaProductMax) {
+            worldAreaProductMax = d.y0 + d.y;
+        }
+    });
+    worldAreaYScale.domain([0,worldAreaProductMax]);
+    console.log(tempWorldAreaData);
     var worldAreaProduct = worldAreaSvg.selectAll(".worldAreaProduct")
         .data(tempWorldAreaData)
         .enter().append("g")
@@ -376,6 +426,9 @@ function updateVisualization() {
         .enter()
         .append("path")
         .attr("d", worldMapPath)
+        .attr("countrycode", function(d){
+            return d.id;
+        })
         .style("fill", function(d) {
 
             // --> CHECK IF DATA IS A VALID NUMBER
@@ -407,6 +460,29 @@ function updateVisualization() {
                 .style("opacity", 1);
             div.transition().duration(300)
                 .style("opacity", 0);
+        })
+        .on("click", function(){
+            // Fix This Line
+            d3.select(this).transition().duration(300).style("stroke-width", "2px");
+            //--------------
+
+            var tempCountry = d3.select(this);
+
+            console.log(tempCountry);
+
+            var selectedCountry = selectedCountries.indexOf(tempCountry.attr("countrycode"));
+            console.log(selectedCountry);
+            if(selectedCountry >= 0){
+                selectedCountries.splice(selectedCountry, 1);
+                console.log("Remove");
+                console.log(tempCountry);
+            } else {
+                selectedCountries.push(tempCountry.attr("countrycode"));
+                console.log("Add");
+                console.log(tempCountry);
+            }
+
+            updateVisualization();
         })
     ;
 
