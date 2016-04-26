@@ -464,6 +464,13 @@ function updateVisualization() {
                 return worldMapColorScale(tempWorldMapDataArray[d.id]);
             }
         })
+        .style("stroke-width", function(d){
+            if(selectedCountries.indexOf(d.id) >= 0){
+                return "2px";
+            } else {
+                return "0.5px";
+            }
+        })
         .on("mouseover", function(d) {
             d3.select(this).transition().duration(300).style("opacity", 0.8);
             div.transition().duration(300)
@@ -487,7 +494,7 @@ function updateVisualization() {
             div.transition().duration(300)
                 .style("opacity", 0);
         })
-        .on("click", function(){
+        .on("click", function() {
             // Fix This Line
             d3.select(this).transition().duration(300).style("stroke-width", "2px");
             //--------------
