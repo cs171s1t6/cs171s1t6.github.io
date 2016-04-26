@@ -33,6 +33,14 @@ footer {
     color: whitesmoke;
 }
 
+.tooltip {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.8);
+    color: #ffffdd;
+
+}
+
 
 /****************/
 /*  LINE CHART  */

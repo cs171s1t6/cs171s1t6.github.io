@@ -1,0 +1,558 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "7xqx-zy2t",
+      "name" : "Boston CANshare Sites 2012",
+      "attribution" : "Mayor's Office of Food Initiatives",
+      "attributionLink" : "http://www.bostoncanshare.com",
+      "averageRating" : 0,
+      "category" : "City Services",
+      "createdAt" : 1354120451,
+      "description" : "Please note: these locations are NOT accurate for 2013's CANshare initiative, and will be updated shortly to reflect participating locations for the upcoming season. (Sept 2013)",
+      "displayType" : "table",
+      "downloadCount" : 432,
+      "indexUpdatedAt" : 1414540154,
+      "licenseId" : "CC0_10",
+      "newBackend" : false,
+      "numberOfComments" : 0,
+      "oid" : 1849664,
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1354122371,
+      "publicationGroup" : 525185,
+      "publicationStage" : "published",
+      "rowClass" : "",
+      "rowsUpdatedAt" : 1354121360,
+      "rowsUpdatedBy" : "qyzb-duix",
+      "tableId" : 525185,
+      "totalTimesRated" : 0,
+      "viewCount" : 395,
+      "viewLastModified" : 1379345074,
+      "viewType" : "tabular",
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { }
+      }, {
+        "id" : 31796744,
+        "name" : "Site",
+        "dataTypeName" : "text",
+        "fieldName" : "site",
+        "position" : 1,
+        "renderTypeName" : "text",
+        "tableColumnId" : 5621371,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 130,
+          "smallest" : "Adams St. Library",
+          "null" : 0,
+          "largest" : "YMCA Charlestown",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Tynan Community Center"
+          }, {
+            "count" : 19,
+            "item" : "Draper Pool"
+          }, {
+            "count" : 18,
+            "item" : "Ohrenberger Community Center"
+          }, {
+            "count" : 17,
+            "item" : "West Roxbury Shaw's Supermarket"
+          }, {
+            "count" : 16,
+            "item" : "West Roxbury YMCA"
+          }, {
+            "count" : 15,
+            "item" : "BFD Engine 55"
+          }, {
+            "count" : 14,
+            "item" : "BFD Engine 30 & Ladder 25"
+          } ]
+        },
+        "format" : { }
+      }, {
+        "id" : 31796746,
+        "name" : "Address",
+        "dataTypeName" : "location",
+        "fieldName" : "address",
+        "position" : 2,
+        "renderTypeName" : "location",
+        "tableColumnId" : 5621373,
+        "width" : 184,
+        "cachedContents" : {
+          "non_null" : 130,
+          "smallest" : {
+            "longitude" : "-71.06242772934155",
+            "latitude" : "42.35914030428421",
+            "human_address" : "{\"address\":\"1 Ashburton Place\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02108\"}"
+          },
+          "null" : 0,
+          "largest" : {
+            "longitude" : "-71.04962492353656",
+            "latitude" : "42.318095578919156",
+            "human_address" : "{\"address\":\"Morrissey Blvd\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02125\"}"
+          },
+          "top" : [ {
+            "count" : 20,
+            "item" : {
+              "longitude" : "-71.03843569897761",
+              "latitude" : "42.33478931626169",
+              "human_address" : "{\"address\":\"650 E. Fourth Street\",\"city\":\"South Boston\",\"state\":\"MA\",\"zip\":\"02127\"}"
+            }
+          }, {
+            "count" : 19,
+            "item" : {
+              "longitude" : "-71.15973180314938",
+              "latitude" : "42.25923666444942",
+              "human_address" : "{\"address\":\"5279 Washington Street\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}"
+            }
+          }, {
+            "count" : 18,
+            "item" : {
+              "longitude" : "-71.14670644906542",
+              "latitude" : "42.262601300231715",
+              "human_address" : "{\"address\":\"175 W. Boundary Road\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}"
+            }
+          }, {
+            "count" : 17,
+            "item" : {
+              "longitude" : "-71.16357447797691",
+              "latitude" : "42.27740092504115",
+              "human_address" : "{\"address\":\"75 Spring St.\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}"
+            }
+          }, {
+            "count" : 16,
+            "item" : {
+              "longitude" : "-71.15612809157432",
+              "latitude" : "42.283417389417195",
+              "human_address" : "{\"address\":\"15 Bellevue Street\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}"
+            }
+          }, {
+            "count" : 15,
+            "item" : {
+              "longitude" : "-71.12542999989444",
+              "latitude" : "42.253390000048626",
+              "human_address" : "{\"address\":\"5115 Washington St\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02136\"}"
+            }
+          }, {
+            "count" : 14,
+            "item" : {
+              "longitude" : "-71.15685654241804",
+              "latitude" : "42.28408288771885",
+              "human_address" : "{\"address\":\"1940 Centre St\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}"
+            }
+          } ]
+        },
+        "format" : { },
+        "subColumnTypes" : [ "human_address", "latitude", "longitude", "machine_address", "needs_recoding" ]
+      }, {
+        "id" : 31796745,
+        "name" : "Area",
+        "dataTypeName" : "text",
+        "fieldName" : "area",
+        "position" : 3,
+        "renderTypeName" : "text",
+        "tableColumnId" : 5621372,
+        "width" : 148,
+        "cachedContents" : {
+          "non_null" : 130,
+          "smallest" : "Allston",
+          "null" : 0,
+          "largest" : "West Roxbury",
+          "top" : [ {
+            "count" : 20,
+            "item" : "Allston"
+          }, {
+            "count" : 19,
+            "item" : "Auburndale"
+          }, {
+            "count" : 18,
+            "item" : "Boston"
+          }, {
+            "count" : 17,
+            "item" : "Boston "
+          }, {
+            "count" : 16,
+            "item" : "Brighton"
+          }, {
+            "count" : 15,
+            "item" : "Cambridge"
+          }, {
+            "count" : 14,
+            "item" : "Charlestown"
+          }, {
+            "count" : 13,
+            "item" : "Charlestown,"
+          }, {
+            "count" : 12,
+            "item" : "Dorchester"
+          }, {
+            "count" : 11,
+            "item" : "E. Boston"
+          }, {
+            "count" : 10,
+            "item" : "East Boston"
+          }, {
+            "count" : 9,
+            "item" : "Hyde Park"
+          }, {
+            "count" : 8,
+            "item" : "Jamaica Plain"
+          }, {
+            "count" : 7,
+            "item" : "Mattapan"
+          }, {
+            "count" : 6,
+            "item" : "Roslindale"
+          }, {
+            "count" : 5,
+            "item" : "Roxbury"
+          }, {
+            "count" : 4,
+            "item" : "South Boston"
+          }, {
+            "count" : 3,
+            "item" : "West Roxbury"
+          } ]
+        },
+        "format" : { }
+      }, {
+        "id" : 31796747,
+        "name" : "State",
+        "dataTypeName" : "text",
+        "fieldName" : "state",
+        "position" : 4,
+        "renderTypeName" : "text",
+        "tableColumnId" : 5621374,
+        "width" : 160,
+        "cachedContents" : {
+          "non_null" : 130,
+          "smallest" : "MA",
+          "null" : 0,
+          "largest" : "MA",
+          "top" : [ {
+            "count" : 20,
+            "item" : "MA"
+          } ]
+        },
+        "format" : { }
+      }, {
+        "id" : 31796867,
+        "name" : "Zip",
+        "dataTypeName" : "text",
+        "fieldName" : "zip",
+        "position" : 5,
+        "renderTypeName" : "text",
+        "tableColumnId" : 5621375,
+        "width" : 136,
+        "cachedContents" : {
+          "non_null" : 130,
+          "smallest" : "2108",
+          "null" : 0,
+          "largest" : "2215",
+          "top" : [ {
+            "count" : 20,
+            "item" : "2134"
+          }, {
+            "count" : 19,
+            "item" : "2135"
+          }, {
+            "count" : 18,
+            "item" : "2155"
+          }, {
+            "count" : 17,
+            "item" : "2116"
+          }, {
+            "count" : 16,
+            "item" : "2115"
+          }, {
+            "count" : 15,
+            "item" : "2118"
+          }, {
+            "count" : 14,
+            "item" : "2114"
+          }, {
+            "count" : 13,
+            "item" : "2109"
+          }, {
+            "count" : 12,
+            "item" : "2210"
+          }, {
+            "count" : 11,
+            "item" : "2128"
+          }, {
+            "count" : 10,
+            "item" : "2124"
+          }, {
+            "count" : 9,
+            "item" : "2110"
+          }, {
+            "count" : 8,
+            "item" : "2125"
+          }, {
+            "count" : 7,
+            "item" : "2111"
+          }, {
+            "count" : 6,
+            "item" : "2108"
+          }, {
+            "count" : 5,
+            "item" : "2133"
+          }, {
+            "count" : 4,
+            "item" : "2113"
+          }, {
+            "count" : 3,
+            "item" : "2199"
+          }, {
+            "count" : 2,
+            "item" : "2215"
+          }, {
+            "count" : 1,
+            "item" : "2127"
+          } ]
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "align" : "right",
+          "noCommas" : "false"
+        }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "license" : {
+        "name" : "Creative Commons 1.0 Universal (Public Domain Dedication)",
+        "logoUrl" : "images/licenses/ccZero.png",
+        "termsLink" : "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+      },
+      "metadata" : {
+        "custom_fields" : {
+          "Data Owner" : {
+            "Owner" : "Office of the Mayor"
+          }
+        },
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        },
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "rdfSubject" : "0",
+        "rowIdentifier" : "0",
+        "rdfClass" : ""
+      },
+      "owner" : {
+        "id" : "qyzb-duix",
+        "displayName" : "GGoldleaf",
+        "roleName" : "publisher",
+        "screenName" : "GGoldleaf",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_nominations", "approve_nominations", "moderate_comments", "manage_stories", "feature_items", "change_configurations", "view_domain", "view_others_datasets", "create_pages", "edit_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "manage_provenance", "view_story", "view_unpublished_story", "view_all_dataset_status_logs" ]
+      },
+      "query" : { },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "qyzb-duix",
+        "displayName" : "GGoldleaf",
+        "roleName" : "publisher",
+        "screenName" : "GGoldleaf",
+        "rights" : [ "create_datasets", "edit_others_datasets", "edit_nominations", "approve_nominations", "moderate_comments", "manage_stories", "feature_items", "change_configurations", "view_domain", "view_others_datasets", "create_pages", "edit_pages", "view_goals", "view_dashboards", "edit_goals", "edit_dashboards", "manage_provenance", "view_story", "view_unpublished_story", "view_all_dataset_status_logs" ]
+      },
+      "tags" : [ "office of food initiatives", "food", "food access", "food security", "hunger", "charity", "food pantries" ],
+      "flags" : [ "default" ]
+    }
+  },
+  "data" : [ [ 1, "1E579CCC-3E51-4B57-A8B3-0CB2770DA853", 1, 1354120452, "699782", 1354121360, "699782", "{\n}", "Genzyme", [ "{\"address\":\"500 Soldier Fields Road\",\"city\":\"Allston\",\"state\":\"MA\",\"zip\":\"02134\"}", "42.36260269409706", "-71.11807777651467", null, false ], "Allston", "MA", "2134" ]
+  , [ 2, "C1A20B6A-D3C7-4E96-876C-F66F8203D65B", 2, 1354120452, "699782", 1354121360, "699782", "{\n}", "Jackson Mann Community Center", [ "{\"address\":\"500 Cambridge Street\",\"city\":\"Allston\",\"state\":\"MA\",\"zip\":\"02134\"}", "42.353068632256054", "-71.13854338564968", null, false ], "Allston", "MA", "2134" ]
+  , [ 118, "038E6C83-0F6F-4129-A94C-BDA55D011221", 118, 1354120452, "699782", 1354121360, "699782", "{\n}", "Roxbury Resource Center", [ "{\"address\":\"2201 Washington Street\",\"city\":\"Roxbury\",\"state\":\"MA\",\"zip\":\"02119\"}", "42.330928572225105", "-71.08289629872843", null, false ], "Roxbury", "MA", "2119" ]
+  , [ 37, "05029BF9-6BAD-4D91-8803-4760D1B9CF64", 37, 1354120452, "699782", 1354121360, "699782", "{\n}", "The HYM Investment Group, LLC", [ "{\"address\":\"1 Congress Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.36016553139763", "-71.05729260055426", null, false ], "Boston", "MA", "2114" ]
+  , [ 80, "05773EC3-70F4-456E-95ED-A7804695D5D0", 80, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 32 & Ladder 9", [ "{\"address\":\"525 Main St\",\"city\":\"Charlestown\",\"state\":\"MA\",\"zip\":\"02129\"}", "42.3824729024686", "-71.07161854472281", null, false ], "Charlestown", "MA", "2129" ]
+  , [ 94, "094CC6A9-7ACB-41CA-93C9-D559B7512EF0", 94, 1354120452, "699782", 1354121360, "699782", "{\n}", "Shaw's Morrissey Blvd.", [ "{\"address\":\"45 Morrissey Blvd\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02125\"}", "42.31915644686154", "-71.05025990228512", null, false ], "Dorchester", "MA", "2125" ]
+  , [ 112, "0A3A248C-D17F-4F76-A471-AA10E1E7F128", 112, 1354120452, "699782", 1354121360, "699782", "{\n}", "Flaherty Pool", [ "{\"address\":\"160 Florence Street\",\"city\":\"Roslindale\",\"state\":\"MA\",\"zip\":\"02131\"}", "42.28766207750957", "-71.12250063607951", null, false ], "Roslindale", "MA", "2131" ]
+  , [ 10, "0BD31E98-95B5-47B3-A037-8D8576BCF70C", 10, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston University School of Public Health", [ "{\"address\":\"715 Albany Street, Talbot Building, 206 Center\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02118\"}", "42.33502782066346", "-71.071463012947", null, false ], "Boston", "MA", "2118" ]
+  , [ 42, "0E45ABE3-C50C-4EF6-A762-B2D868271584", 42, 1354120452, "699782", 1354121360, "699782", "{\n}", "Whole Foods Market - Charles River Plaza", [ "{\"address\":\"181 Cambridge Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.36129054739308", "-71.06544779259728", null, false ], "Boston", "MA", "2114" ]
+  , [ 123, "0EC0B97E-FA15-4D76-9C72-1339AE84018E", 123, 1354120452, "699782", 1354121360, "699782", "{\n}", "South Boston Branch Library", [ "{\"address\":\"646 East Broadway\",\"city\":\"South Boston\",\"state\":\"MA\",\"zip\":\"02127\"}", "42.33564188311743", "-71.03859723897806", null, false ], "South Boston", "MA", "2127" ]
+  , [ 3, "0F3EF4CC-8DE5-4A50-B71D-9EB037C37D4B", 3, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 41 & Ladder 14", [ "{\"address\":\"460 Cambridge St\",\"city\":\"Allston\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.3465999996904", "-71.15137000002534", null, false ], "Allston", "MA", "2135" ]
+  , [ 46, "10067593-BDF4-4AFE-9298-D33D22D528A3", 46, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 56 & Ladder 21", [ "{\"address\":\"1 Ashley St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.387880292574856", "-71.00381698343809", null, false ], "Boston", "MA", "2128" ]
+  , [ 86, "12EC9F1C-3846-4B49-B51A-5FFC9264EFFC", 86, 1354120452, "699782", 1354121360, "699782", "{\n}", "Cleveland Community Center", [ "{\"address\":\"11 Charles Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02122\"}", "42.300657414511114", "-71.0612289865104", null, false ], "Dorchester", "MA", "2122" ]
+  , [ 116, "14125963-8A5C-4D6D-9942-CCCBDA1CC99B", 116, 1354120452, "699782", 1354121360, "699782", "{\n}", "Egleston Square Branch/Boston Public Library", [ "{\"address\":\"2044 Columbus Ave\",\"city\":\"Roxbury\",\"state\":\"MA\",\"zip\":\"02119\"}", "42.31397635197277", "-71.09586452239091", null, false ], "Roxbury", "MA", "2119" ]
+  , [ 100, "1473C0E1-DC58-41BB-9E4C-4B1F8569B3C5", 100, 1354120452, "699782", 1354121360, "699782", "{\n}", "Paris Street Community Center", [ "{\"address\":\"112 Paris Street\",\"city\":\"East Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.37271107370634", "-71.03729167862264", null, false ], "East Boston", "MA", "2128" ]
+  , [ 119, "182EF901-5645-40DE-95B5-381F3815E4DB", 119, 1354120452, "699782", 1354121360, "699782", "{\n}", "Roxbury YMCA Of Greater Boston", [ "{\"address\":\"285 Martin Luther King Blvd\",\"city\":\"Roxbury\",\"state\":\"MA\",\"zip\":\"02119\"}", "42.32060511378295", "-71.09008586582381", null, false ], "Roxbury", "MA", "2119" ]
+  , [ 9, "19C9E026-DF1E-45DC-81D7-288FFB32F482", 9, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston Redevelopment Authority", [ "{\"address\":\"43 Hawkins Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.362081087320064", "-71.06116867850056", null, false ], "Boston", "MA", "2114" ]
+  , [ 18, "19D17902-3C32-4F8D-8810-D12FAEF9F034", 18, 1354120452, "699782", 1354121360, "699782", "{\n}", "Department of Neighborhood Development, City of Boston", [ "{\"address\":\"26 Court Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.35890427218677", "-71.05883226634238", null, false ], "Boston", "MA", "2128" ]
+  , [ 31, "1D6F0679-E91B-474D-9D3B-E4B8D51ACF0B", 31, 1354120452, "699782", 1354121360, "699782", "{\n}", "Shaw's Purdential", [ "{\"address\":\"53 Huntington Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02199\"}", "42.34702863392406", "-71.07979771697222", null, false ], "Boston", "MA", "2199" ]
+  , [ 78, "1DA19DEF-4EDA-4EAC-A522-1C062937F844", 78, 1354120452, "699782", 1354121360, "699782", "{\n}", "Golden Age Center", [ "{\"address\":\"382 Main Street\",\"city\":\"Charlestown\",\"state\":\"MA\",\"zip\":\"02129\"}", "42.37982856023983", "-71.06956782077889", null, false ], "Charlestown", "MA", "2129" ]
+  , [ 61, "1E95A0A9-8A5C-4365-A917-E73FD9C81729", 61, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 16", [ "{\"address\":\"9 Gallivan Blvd\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.278604637085856", "-71.07942106867397", null, false ], "Boston", "MA", "2124" ]
+  , [ 95, "1EFD6A51-4467-41A5-BEE6-15BB964F6B1C", 95, 1354120452, "699782", 1354121360, "699782", "{\n}", "Shaw's Supermarkets Lower Mills", [ "{\"address\":\"4 River Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02126\"}", "42.27222083015238", "-71.07000901404854", null, false ], "Dorchester", "MA", "2126" ]
+  , [ 36, "220BFB66-23AC-47EF-94BE-2E01954A2DC8", 36, 1354120452, "699782", 1354121360, "699782", "{\n}", "The Chiafaro Company", [ "{\"address\":\"1 International Place\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02110\"}", "42.35669936443231", "-71.05156616202527", null, false ], "Boston", "MA", "2110" ]
+  , [ 29, "24161F05-B580-442C-BBFE-679F61585F89", 29, 1354120452, "699782", 1354121360, "699782", "{\n}", "North Bennet Street School", [ "{\"address\":\"39 North Bennet Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02113\"}", "42.365777300860486", "-71.05487342429547", null, false ], "Boston", "MA", "2113" ]
+  , [ 44, "2ABEABA5-EC44-4D9A-83DA-82CC18282311", 44, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 5", [ "{\"address\":\"360 Saratoga St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.378979348250596", "-71.03016005493026", null, false ], "Boston", "MA", "2128" ]
+  , [ 107, "2CDAB414-A5A3-4D95-AEEB-D57F85A20490", 107, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Division 2 Headquarters", [ "{\"address\":\"746 Centre St\",\"city\":\"Jamaica Plain\",\"state\":\"MA\",\"zip\":\"02130\"}", "42.310356575882594", "-71.11478775697407", null, false ], "Jamaica Plain", "MA", "2130" ]
+  , [ 75, "2CF7F654-5942-48EF-9C7E-0E6741EF963D", 75, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 29 & Ladder 11", [ "{\"address\":\"138 Chestnut Hill Ave\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.3426107653857", "-71.15379884751843", null, false ], "Brighton", "MA", "2135" ]
+  , [ 63, "2D0AD9C1-9C09-4C58-9906-E0B6DA17A562", 63, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 20", [ "{\"address\":\"301 Neponset Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02122\"}", "42.28867842328856", "-71.04736408535081", null, false ], "Boston", "MA", "2122" ]
+  , [ 72, "2ECAFF83-C8FE-4373-AFBD-AC8D438D7233", 72, 1354120452, "699782", 1354121360, "699782", "{\n}", "St. Elizabeth's Medical Center", [ "{\"address\":\"736 Cambridge St\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.349656455743144", "-71.14822103232248", null, false ], "Brighton", "MA", "2135" ]
+  , [ 17, "2F55A491-F83C-470B-BE85-E91C0C68313E", 17, 1354120452, "699782", 1354121360, "699782", "{\n}", "Department of Mental Health", [ "{\"address\":\"25 Staniford St.\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.362149175566984", "-71.0637728159521", null, false ], "Boston", "MA", "2114" ]
+  , [ 12, "33441AF8-F43C-4E33-B32E-34D12F589B5B", 12, 1354120452, "699782", 1354121360, "699782", "{\n}", "Brown Brothers Harriman & Co.", [ "{\"address\":\"50 Milk St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02109\"}", "42.35672112802541", "-71.05779622089068", null, false ], "Boston", "MA", "2109" ]
+  , [ 32, "3614A721-E27D-4D34-A347-0A8ED098F0A8", 32, 1354120452, "699782", 1354121360, "699782", "{\n}", "Shaw's Supermarket, Fenway", [ "{\"address\":\"33 Kilmarnock Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02215\"}", "42.34357862317249", "-71.09988747349865", null, false ], "Boston", "MA", "2215" ]
+  , [ 33, "36D821A0-6EBE-4126-B59A-76C73F149279", 33, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston Public Library South End Branch", [ "{\"address\":\"685 Tremont Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02118\"}", "42.34134175774151", "-71.07661048992678", null, false ], "Boston", "MA", "2118" ]
+  , [ 49, "3760AB7D-9A3A-474C-ADCE-31777157CC7F", 49, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Marine Unit", [ "{\"address\":\"Burroughs Wharf, 40 Battery Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02109\"}", "42.36646512766623", "-71.05124011389456", null, false ], "Boston", "MA", "2109" ]
+  , [ 66, "3A676618-6085-408F-8164-016E509B82CA", 66, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 37 Ladder 26 & Special Response Chief", [ "{\"address\":\"560 Huntington Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02120\"}", "42.33743966371725", "-71.09592747493298", null, false ], "Boston", "MA", "2120" ]
+  , [ 129, "3D945734-CCA6-421C-8A5E-C18321A3464D", 129, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 55", [ "{\"address\":\"5115 Washington St\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02136\"}", "42.253390000048626", "-71.12542999989444", null, false ], "West Roxbury", "MA", "2136" ]
+  , [ 15, "3F1D68B8-2405-4CB1-A414-EFB0E9F87040", 15, 1354120452, "699782", 1354121360, "699782", "{\n}", "Community Music Center of Boston", [ "{\"address\":\"34 Warren Avenue\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02116\"}", "42.345042369726464", "-71.07142213235888", null, false ], "Boston", "MA", "2116" ]
+  , [ 22, "3F348202-C044-4EC2-BB7D-CAE9566F066C", 22, 1354120452, "699782", 1354121360, "699782", "{\n}", "Huntington Avenue YMCA", [ "{\"address\":\"316 Huntington Avenue\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02115\"}", "42.34084631700274", "-71.08737682246812", null, false ], "Boston", "MA", "2115" ]
+  , [ 115, "400F3780-A5B6-441F-95AC-CA0FD627D703", 115, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston Public Library Dudley Square Branch LIbrary", [ "{\"address\":\"65 Warren Street\",\"city\":\"Roxbury\",\"state\":\"MA\",\"zip\":\"02119\"}", "42.32850781422953", "-71.08361992218093", null, false ], "Roxbury", "MA", "2119" ]
+  , [ 54, "43BF7D94-1B39-4F1D-A9D3-E3157A4C2176", 54, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 39 Ladder 18 & C-11 Hospital Rep", [ "{\"address\":\"272 D St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02127\"}", "42.339328416063175", "-71.05034287102455", null, false ], "Boston", "MA", "2127" ]
+  , [ 91, "470E0A4C-B8B6-471D-A4A1-AD4297616A98", 91, 1354120452, "699782", 1354121360, "699782", "{\n}", "Leahy/Holloran Community Center", [ "{\"address\":\"1 Worrell Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02122\"}", "42.29468995419834", "-71.05005749201418", null, false ], "Dorchester", "MA", "2122" ]
+  , [ 101, "47406D6A-6AF0-4DCE-8601-B8A4467E8A0E", 101, 1354120452, "699782", 1354121360, "699782", "{\n}", "Department of Neighborhood Development, City of Boston", [ "{\"address\":\"Central Ave.\",\"city\":\"Hyde Park\",\"state\":\"MA\",\"zip\":\"02136\"}", "42.257827181073424", "-71.12064983751844", null, false ], "Hyde Park", "MA", "2136" ]
+  , [ 102, "4B57C3B3-BCA3-45B6-A03E-340593577D41", 102, 1354120452, "699782", 1354121360, "699782", "{\n}", "Hyde Park Community Center/YMCA", [ "{\"address\":\"1179 River Street\",\"city\":\"Hyde Park\",\"state\":\"MA\",\"zip\":\"02136\"}", "42.25620877549776", "-71.12080010847458", null, false ], "Hyde Park", "MA", "2136" ]
+  , [ 8, "52ED45AB-24AF-4429-B280-596C7552D28F", 8, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston Public Health Commission", [ "{\"address\":\"1010 Massachusetts Ave. 2nd Floor\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02118\"}", "42.32711544682087", "-71.06708621745332", null, false ], "Boston", "MA", "2118" ]
+  , [ 85, "54D3B2AB-2F57-437B-90C9-8398327080E4", 85, 1354120452, "699782", 1354121360, "699782", "{\n}", "Bowdoin Street Health Center", [ "{\"address\":\"230 Bowdoin Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02122\"}", "42.30580023935842", "-71.06764200765619", null, false ], "Dorchester", "MA", "2122" ]
+  , [ 124, "56F54AEA-9508-44D3-83E8-28678FCC0D19", 124, 1354120452, "699782", 1354121360, "699782", "{\n}", "Tynan Community Center", [ "{\"address\":\"650 E. Fourth Street\",\"city\":\"South Boston\",\"state\":\"MA\",\"zip\":\"02127\"}", "42.33478931626169", "-71.03843569897761", null, false ], "South Boston", "MA", "2127" ]
+  , [ 108, "5F6B137C-5FB5-4A2D-9CDE-EF7CF4BF8C64", 108, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 28 & Tower Ladder 10", [ "{\"address\":\"746 Centre S\",\"city\":\"Jamaica Plain\",\"state\":\"MA\",\"zip\":\"02130\"}", "42.310356575882594", "-71.11478775697407", null, false ], "Jamaica Plain", "MA", "2130" ]
+  , [ 56, "5FD7985E-D09D-465A-990E-0B3D7E689FAA", 56, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 10 Rescue 1 & Tower Ladder 3", [ "{\"address\":\"125 Purchase St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02110\"}", "42.355162349099835", "-71.05221623363121", null, false ], "Boston", "MA", "2110" ]
+  , [ 7, "609757E8-8832-4FFB-98FD-487B6020DF43", 7, 1354120452, "699782", 1354121360, "699782", "{\n}", "BioMed Realty Trust", [ "{\"address\":\"3 Blackfan Circle\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02115\"}", "42.33850985693209", "-71.10432714268666", null, false ], "Boston", "MA", "2115" ]
+  , [ 35, "6142F199-5A2F-4944-9FCB-4B801634D5FF", 35, 1354120452, "699782", 1354121360, "699782", "{\n}", "T-C 33 Arch Street", [ "{\"address\":\"33 Arch Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02110\"}", "42.35619052802815", "-71.05780521411094", null, false ], "Boston", "MA", "2110" ]
+  , [ 109, "65870294-B466-4E63-95B2-11F9A318AA01", 109, 1354120452, "699782", 1354121360, "699782", "{\n}", "Gallivan Community Center", [ "{\"address\":\"61 Woodruff Way\",\"city\":\"Mattapan\",\"state\":\"MA\",\"zip\":\"02126\"}", "42.27483351806475", "-71.0815894224043", null, false ], "Mattapan", "MA", "2126" ]
+  , [ 120, "66CEEDF8-7F45-4B76-88EC-77DCD8C878F8", 120, 1354120452, "699782", 1354121360, "699782", "{\n}", "Tobin Community Center", [ "{\"address\":\"1481 Tremont Street\",\"city\":\"Roxbury\",\"state\":\"MA\",\"zip\":\"02120\"}", "42.33199876543995", "-71.0980588681424", null, false ], "Roxbury", "MA", "2120" ]
+  , [ 127, "67E78CAF-DB7E-4E40-8277-AEB082E2E0E5", 127, 1354120452, "699782", 1354121360, "699782", "{\n}", "West Roxbury Shaw's Supermarket", [ "{\"address\":\"75 Spring St.\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}", "42.27740092504115", "-71.16357447797691", null, false ], "West Roxbury", "MA", "2132" ]
+  , [ 93, "68F350A7-02BB-4D5B-8F01-A57475C3E5A5", 93, 1354120452, "699782", 1354121360, "699782", "{\n}", "Project R.I.G.H.T Inc.", [ "{\"address\":\"320A Blue Hill Avenue\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02121\"}", "42.31356232800846", "-71.07939797470699", null, false ], "Dorchester", "MA", "2121" ]
+  , [ 77, "6907EC1B-3804-43AA-A3D8-79117618D1D1", 77, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston Properties", [ "{\"address\":\"4 Cambridge Center\",\"city\":\"Cambridge\",\"state\":\"MA\",\"zip\":\"02142\"}", "42.36345705002486", "-71.08643063430355", null, false ], "Cambridge", "MA", "2142" ]
+  , [ 47, "6A5D51E0-34D2-4AD9-AD0A-8932B00F16BE", 47, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 4 & Ladder 24", [ "{\"address\":\"200 Cambridge St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.361090969629004", "-71.06580884292597", null, false ], "Boston", "MA", "2114" ]
+  , [ 71, "6B0CAB59-AA28-4E5D-91CE-FC526248C539", 71, 1354120452, "699782", 1354121360, "699782", "{\n}", "Oak Square YMCA", [ "{\"address\":\"615 Washington Street\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.350515806023225", "-71.16676707118097", null, false ], "Brighton", "MA", "2135" ]
+  , [ 52, "6B53C655-6B7B-45E2-AF05-C8CD6EAB1D5B", 52, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 22 W-25 & Hazmat Unit", [ "{\"address\":\"700 Tremont St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02118\"}", "42.34066822980242", "-71.07772519705998", null, false ], "Boston", "MA", "2118" ]
+  , [ 121, "6ED27E12-3690-47B5-86ED-3AA889E6AA9D", 121, 1354120452, "699782", 1354121360, "699782", "{\n}", "Condon Community Center", [ "{\"address\":\"200 'D' Street\",\"city\":\"South Boston\",\"state\":\"MA\",\"zip\":\"02127\"}", "42.33779939252895", "-71.05207653278433", null, false ], "South Boston", "MA", "2127" ]
+  , [ 99, "701F02C4-D11D-492A-9C27-1070DD2B1A0E", 99, 1354120452, "699782", 1354121360, "699782", "{\n}", "Orient Heights Branch/ Boston Public Library", [ "{\"address\":\"18 Barnes Avenue\",\"city\":\"East Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.385967080418254", "-71.00592332624063", null, false ], "East Boston", "MA", "2128" ]
+  , [ 96, "709FE815-4E8B-4909-AD1C-CF9727708A30", 96, 1354120452, "699782", 1354121360, "699782", "{\n}", "Uphams Corner Library", [ "{\"address\":\"500 Columbia Road\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02125\"}", "42.31468681637591", "-71.06741896660418", null, false ], "Dorchester", "MA", "2125" ]
+  , [ 117, "71263199-82A9-4377-BB6B-7C503B2BF14B", 117, 1354120452, "699782", 1354121360, "699782", "{\n}", "Mason Pool", [ "{\"address\":\"159 Norfolk Avenue\",\"city\":\"Roxbury\",\"state\":\"MA\",\"zip\":\"02119\"}", "42.32619813835095", "-71.07080941065465", null, false ], "Roxbury", "MA", "2119" ]
+  , [ 64, "71BCEB0B-DAEB-46D3-928B-B7CB2CB1E8C9", 64, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 52 & Ladder 29", [ "{\"address\":\"975 Blue Hill Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.29041609945849", "-71.08957034985976", null, false ], "Boston", "MA", "2124" ]
+  , [ 122, "736B5062-370B-4A33-BD9D-99AE2A7F3E41", 122, 1354120452, "699782", 1354121360, "699782", "{\n}", "Curley Community Center", [ "{\"address\":\"1663 Columbia Road\",\"city\":\"South Boston\",\"state\":\"MA\",\"zip\":\"02127\"}", "42.3294697461504", "-71.03521497200956", null, false ], "South Boston", "MA", "2127" ]
+  , [ 90, "75C44F30-1B66-44AD-9725-FAF81B1FC47D", 90, 1354120452, "699782", 1354121360, "699782", "{\n}", "Holland Community Center", [ "{\"address\":\"85 Olney Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02121\"}", "42.305504432349665", "-71.07292403616798", null, false ], "Dorchester", "MA", "2121" ]
+  , [ 43, "79FD15C2-1D15-4F4F-A66F-2EE994A255B3", 43, 1354120452, "699782", 1354121360, "699782", "{\n}", "Whole Foods- Symphony", [ "{\"address\":\"15 Westland Avenue\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02115\"}", "42.34348135392869", "-71.0866805433281", null, false ], "Boston", "MA", "2115" ]
+  , [ 38, "7B025318-DA74-493E-BC27-92C1738E6FB4", 38, 1354120452, "699782", 1354121360, "699782", "{\n}", "Tishman Speyer", [ "{\"address\":\"125 High Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02110\"}", "42.355285184417646", "-71.0538271603715", null, false ], "Boston", "MA", "2110" ]
+  , [ 39, "7DF9416B-2C93-4F12-9630-40E40DCAB80D", 39, 1354120452, "699782", 1354121360, "699782", "{\n}", "UMass Boston ProjectServe", [ "{\"address\":\"Morrissey Blvd\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02125\"}", "42.318095578919156", "-71.04962492353656", null, false ], "Boston", "MA", "2125" ]
+  , [ 81, "80B4A249-E085-44DD-8223-94999BFE76C0", 81, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 50", [ "{\"address\":\"34 Winthrop St\",\"city\":\"Charlestown\",\"state\":\"MA\",\"zip\":\"02129\"}", "42.374140995732944", "-71.06103378019617", null, false ], "Charlestown", "MA", "2129" ]
+  , [ 14, "83B52A83-EB84-403C-ADEC-4AF9339659CC", 14, 1354120452, "699782", 1354121360, "699782", "{\n}", "City of Boston Department of Workforce Development", [ "{\"address\":\"19 Staniford Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.36191730464997", "-71.06374745507058", null, false ], "Boston", "MA", "2114" ]
+  , [ 53, "84640EF4-9CFB-4143-B596-BA64966194F0", 53, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 33 & Ladder 15", [ "{\"address\":\"941 Boylston St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02116\"}", "42.348673116231346", "-71.08277281526092", null, false ], "Boston", "MA", "2116" ]
+  , [ 50, "861150C6-28DA-4B26-8B7F-C4C087EF9C99", 50, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 7 & Tower Ladder 17", [ "{\"address\":\"200 Columbus Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02116\"}", "42.34864047007773", "-71.07164827349234", null, false ], "Boston", "MA", "2116" ]
+  , [ 24, "88D3D823-3A62-468D-B202-2EE7DD507159", 24, 1354120452, "699782", 1354121360, "699782", "{\n}", "John F Kennedy Library", [ "{\"address\":\"220 Morrissey Boulevard\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02125\"}", "42.31187643955572", "-71.04570801717836", null, false ], "Boston", "MA", "2125" ]
+  , [ 23, "8997A237-68B8-480A-AD5F-154F22BD0555", 23, 1354120452, "699782", 1354121360, "699782", "{\n}", "ITG", [ "{\"address\":\"100 High Street #17\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02110\"}", "42.35464151097145", "-71.05467474824287", null, false ], "Boston", "MA", "2110" ]
+  , [ 114, "90F759A9-DAD0-402D-8996-47296BCCA1C3", 114, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 53 & Ladder 16", [ "{\"address\":\"945 Canterbury St\",\"city\":\"Roslindale\",\"state\":\"MA\",\"zip\":\"02131\"}", "42.27871393520394", "-71.11729536634914", null, false ], "Roslindale", "MA", "2131" ]
+  , [ 97, "9110E846-8F71-41E7-8FD9-A561C5666625", 97, 1354120452, "699782", 1354121360, "699782", "{\n}", "Shaw's Supermarket - East Boston", [ "{\"address\":\"246 Border Street\",\"city\":\"E. Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.3764865486294", "-71.03991198597434", null, false ], "E. Boston", "MA", "2128" ]
+  , [ 34, "91E25F4A-2F6B-4C8F-80E2-1D5BDA699621", 34, 1354120452, "699782", 1354121360, "699782", "{\n}", "Suffolk S.O.U.L.S. Center for Community Engagement", [ "{\"address\":\"41 Temple Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.36001264665265", "-71.06361483442026", null, false ], "Boston", "MA", "2114" ]
+  , [ 4, "96A48E32-9AD4-4F28-96F1-BD40EB796E4D", 4, 1354120452, "699782", 1354121360, "699782", "{\n}", "Star Market", [ "{\"address\":\"2040 Commonwealth Avenue\",\"city\":\"Auburndale\",\"state\":\"MA\",\"zip\":\"02155\"}", "42.34746917729245", "-71.2455708323564", null, false ], "Auburndale", "MA", "2155" ]
+  , [ 20, "9812A3E3-CE56-4CC6-9C5B-8C151152F3AA", 20, 1354120452, "699782", 1354121360, "699782", "{\n}", "Federal Reserve Bank of Boston", [ "{\"address\":\"600 Atlantic Avenue\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02210\"}", "42.35275435703755", "-71.05520608227964", null, false ], "Boston", "MA", "2210" ]
+  , [ 88, "987A001A-4F06-4E67-9C5B-8F0C27DFD457", 88, 1354120452, "699782", 1354121360, "699782", "{\n}", "Dorchester YMCA", [ "{\"address\":\"776 Washington Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.28484731144374", "-71.07134900387223", null, false ], "Dorchester", "MA", "2124" ]
+  , [ 76, "9B8A16DA-5BBC-4FDD-8DA2-81479DF7A129", 76, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 51", [ "{\"address\":\"425 Faneuil St\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.35109137212197", "-71.1681070610046", null, false ], "Brighton", "MA", "2135" ]
+  , [ 62, "9E2A1D7B-70B8-4332-80A8-2B1EAAC69636", 62, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 18 & Ladder 6", [ "{\"address\":\"1884 Dorchester Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.28641213177474", "-71.0640465089943", null, false ], "Boston", "MA", "2124" ]
+  , [ 6, "9FCDEBB0-08DE-45E2-B6AE-9529868B66BF", 6, 1354120452, "699782", 1354121360, "699782", "{\n}", "Ben & Jerry's", [ "{\"address\":\"174 Newbury Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02116\"}", "42.35047983314206", "-71.07907418010393", null, false ], "Boston", "MA", "2116" ]
+  , [ 65, "A1CBEA91-506D-4DDC-B999-007593A9C47C", 65, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 42 & Rescue 2", [ "{\"address\":\"1870 Columbus Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02119\"}", "42.3184729621193", "-71.09822973932802", null, false ], "Boston", "MA", "2119" ]
+  , [ 67, "A2A960CA-5E3A-4718-B58E-44840D5E4A73", 67, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 49", [ "{\"address\":\"209 Neponset Valley Pkwy\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02132\"}", "42.236897772191526", "-71.13096688047509", null, false ], "Boston", "MA", "2132" ]
+  , [ 41, "A2D95DCA-A54E-4AC8-B3C0-487D421156EC", 41, 1354120452, "699782", 1354121360, "699782", "{\n}", "Wang YMCA of Chinatown", [ "{\"address\":\"8 Oak Street West\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02116\"}", "42.3486526298962", "-71.06532442073741", null, false ], "Boston", "MA", "2116" ]
+  , [ 92, "A2DA7940-FBF0-40AE-83E1-4AC5916D437A", 92, 1354120452, "699782", 1354121360, "699782", "{\n}", "Perkins Community Center", [ "{\"address\":\"155 Talbot Avenue\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.292509838914825", "-71.0799995461606", null, false ], "Dorchester", "MA", "2124" ]
+  , [ 89, "A58B8736-E802-403A-9C44-E122D0D2113B", 89, 1354120452, "699782", 1354121360, "699782", "{\n}", "Grove Hall Community Center", [ "{\"address\":\"48 Geneva Ave\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02121\"}", "42.30797787403736", "-71.08088181738282", null, false ], "Dorchester", "MA", "2121" ]
+  , [ 25, "A961A23D-B1E6-4864-868C-E45712A86238", 25, 1354120452, "699782", 1354121360, "699782", "{\n}", "Jones Lang Lasalle", [ "{\"address\":\"260 Franklin Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02110\"}", "42.35670314158483", "-71.05373128531824", null, false ], "Boston", "MA", "2110" ]
+  , [ 26, "A99DD2F9-285A-4A65-AFBD-66CBE8881917", 26, 1354120452, "699782", 1354121360, "699782", "{\n}", "KPMG LLP.", [ "{\"address\":\"60 South Street, Mailroom 3rd floor\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02111\"}", "42.351869999900714", "-71.06079000025818", null, false ], "Boston", "MA", "2111" ]
+  , [ 48, "AB3254C3-C0A4-47B9-81F5-6C6531F808B2", 48, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 8 & Ladder 1", [ "{\"address\":\"392 Hanover St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02113\"}", "42.36581904968259", "-71.05293343410725", null, false ], "Boston", "MA", "2113" ]
+  , [ 105, "AF259CE5-2EC3-41B9-9E08-FAD41E6FB980", 105, 1354120452, "699782", 1354121360, "699782", "{\n}", "Hennigan Community Center", [ "{\"address\":\"200 Heath Street\",\"city\":\"Jamaica Plain\",\"state\":\"MA\",\"zip\":\"02130\"}", "42.32623411123217", "-71.10595491555966", null, false ], "Jamaica Plain", "MA", "2130" ]
+  , [ 27, "AF57B5CA-E8F4-4507-8998-7ECA3F0AC38D", 27, 1354120452, "699782", 1354121360, "699782", "{\n}", "Massachusetts State Department", [ "{\"address\":\"1 Ashburton Place\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02108\"}", "42.35914030428421", "-71.06242772934155", null, false ], "Boston", "MA", "2108" ]
+  , [ 58, "B1EFE40B-E820-4FD2-8BBF-09F252279519", 58, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 21", [ "{\"address\":\"641 Columbia Rd\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02125\"}", "42.3183650696174", "-71.06349505950777", null, false ], "Boston", "MA", "2125" ]
+  , [ 28, "B2461F7C-D49A-4B53-95AB-FEA7A6212C0E", 28, 1354120452, "699782", 1354121360, "699782", "{\n}", "Massachusetts State House", [ "{\"address\":\"24 Beacon Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02133\"}", "42.35771937547793", "-71.06331805815057", null, false ], "Boston", "MA", "2133" ]
+  , [ 110, "B2842F73-F673-4BBB-BB0A-66CDB294BD04", 110, 1354120452, "699782", 1354121360, "699782", "{\n}", "Mildred Avenue Community Center", [ "{\"address\":\"5 Mildred Avenue\",\"city\":\"Mattapan\",\"state\":\"MA\",\"zip\":\"02126\"}", "42.275681819508414", "-71.09201993902776", null, false ], "Mattapan", "MA", "2126" ]
+  , [ 5, "B8A6157C-3B5F-4B5C-B0F4-936F17FD39E0", 5, 1354120452, "699782", 1354121360, "699782", "{\n}", "b.good", [ "{\"address\":\"131 Dartmouth Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02116\"}", "42.34674764672047", "-71.07569272927373", null, false ], "Boston", "MA", "2116" ]
+  , [ 113, "B9924C17-93B1-4331-80E8-20C9D440E2AF", 113, 1354120452, "699782", 1354121360, "699782", "{\n}", "Roslindale Community Center", [ "{\"address\":\"6 Cummins Highway\",\"city\":\"Roslindale\",\"state\":\"MA\",\"zip\":\"02131\"}", "42.28638274317667", "-71.12792914083742", null, false ], "Roslindale", "MA", "2131" ]
+  , [ 126, "BA490846-FF38-4BFB-83C2-52B48EAD4257", 126, 1354120452, "699782", 1354121360, "699782", "{\n}", "Ohrenberger Community Center", [ "{\"address\":\"175 W. Boundary Road\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}", "42.262601300231715", "-71.14670644906542", null, false ], "West Roxbury", "MA", "2132" ]
+  , [ 30, "C01A5A15-E60A-4DFA-9073-5826E5E7BAB9", 30, 1354120452, "699782", 1354121360, "699782", "{\n}", "One Federal Street", [ "{\"address\":\"1 Federal St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02110\"}", "42.356127575486084", "-71.05665408191345", null, false ], "Boston", "MA", "2110" ]
+  , [ 74, "C17609B4-8192-4854-BD0E-500A4637280B", 74, 1354120452, "699782", 1354121360, "699782", "{\n}", "Whole Foods Market - Brighton", [ "{\"address\":\"15 Washington Street\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.34252982640305", "-71.14065075945007", null, false ], "Brighton", "MA", "2135" ]
+  , [ 130, "C2A13185-5603-41BD-9080-6C8AC003FE47", 130, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 30 & Ladder 25", [ "{\"address\":\"1940 Centre St\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}", "42.28408288771885", "-71.15685654241804", null, false ], "West Roxbury", "MA", "2132" ]
+  , [ 111, "C3B802FC-EF04-454A-8287-8B6E3F01E9E5", 111, 1354120452, "699782", 1354121360, "699782", "{\n}", "Archdale Community Center", [ "{\"address\":\"125 Brookway Road\",\"city\":\"Roslindale\",\"state\":\"MA\",\"zip\":\"02131\"}", "42.292651782224326", "-71.11972105957577", null, false ], "Roslindale", "MA", "2131" ]
+  , [ 19, "C5430AF4-5C72-463F-A3F0-6CB95267EF35", 19, 1354120452, "699782", 1354121360, "699782", "{\n}", "Emmanuel College", [ "{\"address\":\"400 Fenway\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.340816473667736", "-71.10134402259963", null, false ], "Boston", "MA", "2124" ]
+  , [ 40, "C6989738-1F46-40A6-8E76-557E1D86473B", 40, 1354120452, "699782", 1354121360, "699782", "{\n}", "United South End Settlements", [ "{\"address\":\"566 Columbus Avenue\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02118\"}", "42.340947417299105", "-71.08122108583053", null, false ], "Boston", "MA", "2118" ]
+  , [ 73, "CC1EFD0C-A8AB-4931-9431-044E0E6B794C", 73, 1354120452, "699782", 1354121360, "699782", "{\n}", "Star Market - Brighton Mills", [ "{\"address\":\"370 Western Ave.\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.36280189677809", "-71.13778213121533", null, false ], "Brighton", "MA", "2135" ]
+  , [ 55, "D1586A76-E661-4D9D-8356-A3FCEEFB4CC3", 55, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 2 & Ladder 19", [ "{\"address\":\"700 E 4th St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02127\"}", "42.33479676151938", "-71.03648600067653", null, false ], "Boston", "MA", "2127" ]
+  , [ 125, "D5094F64-C1B8-41BB-B2B4-3552E75E7F9D", 125, 1354120452, "699782", 1354121360, "699782", "{\n}", "Draper Pool", [ "{\"address\":\"5279 Washington Street\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}", "42.25923666444942", "-71.15973180314938", null, false ], "West Roxbury", "MA", "2132" ]
+  , [ 106, "D533788D-A2CC-45BA-8626-34E96786C619", 106, 1354120452, "699782", 1354121360, "699782", "{\n}", "Whole Foods- Jamaica Plain", [ "{\"address\":\"413 Centre Street\",\"city\":\"Jamaica Plain\",\"state\":\"MA\",\"zip\":\"02130\"}", "42.321224887528956", "-71.11038857316413", null, false ], "Jamaica Plain", "MA", "2130" ]
+  , [ 104, "D7B0BD9A-7FEA-4D2E-A1F8-FCD06CAD44FA", 104, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston Public Library-Connolly Branch Library", [ "{\"address\":\"433 Centre Street\",\"city\":\"Jamaica Plain\",\"state\":\"MA\",\"zip\":\"02130\"}", "42.320514423125815", "-71.11093715960203", null, false ], "Jamaica Plain", "MA", "2130" ]
+  , [ 128, "D9D779C9-6238-41A0-8EA5-6264C3BD9C7F", 128, 1354120452, "699782", 1354121360, "699782", "{\n}", "West Roxbury YMCA", [ "{\"address\":\"15 Bellevue Street\",\"city\":\"West Roxbury\",\"state\":\"MA\",\"zip\":\"02132\"}", "42.283417389417195", "-71.15612809157432", null, false ], "West Roxbury", "MA", "2132" ]
+  , [ 87, "DD170101-7074-4F1E-836A-BE029EFBF917", 87, 1354120452, "699782", 1354121360, "699782", "{\n}", "Codman Square Branch Library", [ "{\"address\":\"690 Washington Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.28777637991336", "-71.07114046707115", null, false ], "Dorchester", "MA", "2124" ]
+  , [ 51, "DD3EBDD4-38D6-4AEE-BC68-0E7C4ED9A9E6", 51, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 3 & Special Unit", [ "{\"address\":\"618 Harrison Ave\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02118\"}", "42.34027807375016", "-71.06830680808325", null, false ], "Boston", "MA", "2118" ]
+  , [ 59, "DE80C6F2-6866-4674-BC12-966662C82F82", 59, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 24 & Ladder 23", [ "{\"address\":\"36 Washington St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02121\"}", "42.3073933147183", "-71.08245563093408", null, false ], "Boston", "MA", "2121" ]
+  , [ 21, "E18FCED9-53F9-4AEC-926D-C090C9DD24E3", 21, 1354120452, "699782", 1354121360, "699782", "{\n}", "Hines", [ "{\"address\":\"500 Boylston\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02116\"}", "42.3508305687335", "-71.07450562419507", null, false ], "Boston", "MA", "2116" ]
+  , [ 11, "E5966850-4DF2-4E3E-AD3A-678307BBDB4B", 11, 1354120452, "699782", 1354121360, "699782", "{\n}", "Brookfield Properties", [ "{\"address\":\"75 State Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02109\"}", "42.359014399200134", "-71.05550294971596", null, false ], "Boston", "MA", "2109" ]
+  , [ 69, "E60702ED-8B28-420B-932B-73282A0F1101", 69, 1354120452, "699782", 1354121360, "699782", "{\n}", "Brighton Branch of the Boston Public Library.", [ "{\"address\":\"40 Academy Hill Road\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02132\"}", "42.34786138046067", "-71.15326566195472", null, false ], "Brighton", "MA", "2132" ]
+  , [ 60, "E7069415-6BB9-4FB6-B652-2E77CF684E1A", 60, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 14 Ladder 4 & Safety Chief H-1", [ "{\"address\":\"174 Dudley St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02119\"}", "42.32862278534627", "-71.0822863714808", null, false ], "Boston", "MA", "2119" ]
+  , [ 57, "F1BA5B09-3ACA-4969-8667-EC84C722A55A", 57, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 17 & Ladder 7", [ "{\"address\":\"7 Parish St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02122\"}", "42.30791996448772", "-71.06253115888327", null, false ], "Boston", "MA", "2122" ]
+  , [ 45, "F271D421-6BDB-4C4B-89C4-5052EFC55664", 45, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 9 & Ladder 2", [ "{\"address\":\"239 Sumner St\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.36825942966135", "-71.03855072946362", null, false ], "Boston", "MA", "2128" ]
+  , [ 83, "F54D2E68-D7CB-4A1F-9D54-78B38106940A", 83, 1354120452, "699782", 1354121360, "699782", "{\n}", "Adams St. Library", [ "{\"address\":\"690 Adams Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02122\"}", "42.28599921359289", "-71.05470939486213", null, false ], "Dorchester", "MA", "2122" ]
+  , [ 68, "F590ABCA-2A41-405C-AA9C-108F5BEE84E4", 68, 1354120452, "699782", 1354121360, "699782", "{\n}", "MA State Department ", [ "{\"address\":\"1 Ashburton Place\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02108\"}", "42.35914030428421", "-71.06242772934155", null, false ], "Boston ", "MA", "2108" ]
+  , [ 98, "F5E94B1F-3F1E-477B-96A6-84AEF9471802", 98, 1354120452, "699782", 1354121360, "699782", "{\n}", "East Boston YMCA", [ "{\"address\":\"215 Bremen Street\",\"city\":\"East Boston\",\"state\":\"MA\",\"zip\":\"02128\"}", "42.373702126760755", "-71.03322427323188", null, false ], "East Boston", "MA", "2128" ]
+  , [ 16, "F605F4F8-B9B7-40B9-ABD3-910146BE683D", 16, 1354120452, "699782", 1354121360, "699782", "{\n}", "Cushman & Wakefield of MA, Inc.", [ "{\"address\":\"470 Atlantic Avenue\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02210\"}", "42.3547167482749", "-71.05139021308732", null, false ], "Boston", "MA", "2210" ]
+  , [ 84, "F8F92B37-CBF3-4943-B22B-D082054424CB", 84, 1354120452, "699782", 1354121360, "699782", "{\n}", "Boston Public Library Lower Mills branch", [ "{\"address\":\"27 Richmond Street\",\"city\":\"Dorchester\",\"state\":\"MA\",\"zip\":\"02124\"}", "42.273789056608464", "-71.06767836470934", null, false ], "Dorchester", "MA", "2124" ]
+  , [ 13, "F91630B4-C940-4FA9-A848-970CE79631A1", 13, 1354120452, "699782", 1354121360, "699782", "{\n}", "CB Richard Ellis/New England", [ "{\"address\":\"100 Cambridge Street\",\"city\":\"Boston\",\"state\":\"MA\",\"zip\":\"02114\"}", "42.36114579240956", "-71.06266155306918", null, false ], "Boston", "MA", "2114" ]
+  , [ 82, "F9DE4A79-3825-4CBB-815E-8D5E6B62859C", 82, 1354120452, "699782", 1354121360, "699782", "{\n}", "Charlestown Community Center", [ "{\"address\":\"255 Medford Street\",\"city\":\"Charlestown,\",\"state\":\"MA\",\"zip\":\"02129\"}", "42.380730215429104", "-71.06128995131475", null, false ], "Charlestown,", "MA", "2129" ]
+  , [ 70, "FE214F38-A8A7-4C6B-948C-6707E5184375", 70, 1354120452, "699782", 1354121360, "699782", "{\n}", "Faneuil Branch Boston Public Library", [ "{\"address\":\"419 Fanueil Street\",\"city\":\"Brighton\",\"state\":\"MA\",\"zip\":\"02135\"}", "42.351136338223455", "-71.16790921015814", null, false ], "Brighton", "MA", "2135" ]
+  , [ 103, "FEBC8275-EB09-41F9-AFF2-98334429C586", 103, 1354120452, "699782", 1354121360, "699782", "{\n}", "BFD Engine 48 Ladder 28", [ "{\"address\":\"60 Fairmont Avenue\",\"city\":\"Hyde Park\",\"state\":\"MA\",\"zip\":\"02136\"}", "42.25498982007099", "-71.12020017650377", null, false ], "Hyde Park", "MA", "2136" ]
+  , [ 79, "FF5F06C2-5184-4042-BA5D-00402033013F", 79, 1354120452, "699782", 1354121360, "699782", "{\n}", "YMCA Charlestown", [ "{\"address\":\"150 3rd Ave\",\"city\":\"Charlestown\",\"state\":\"MA\",\"zip\":\"02129\"}", "42.376515205890314", "-71.05351544803119", null, false ], "Charlestown", "MA", "2129" ]
+  ]
+}

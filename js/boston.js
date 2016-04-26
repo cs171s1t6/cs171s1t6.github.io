@@ -9,21 +9,29 @@ var bostonMapSvg = d3.select("#bostonMap").append("svg")
     .style("margin", "10px auto");
 
 // Define Scales
-var bostonMapColorScale = d3.scale.threshold()
-    .range(["#fee5d9", "#fcbba1", "#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]);
+var bostonMapColorScale = d3.scale.ordinal()
+    .domain([0,1,2,3,4,5])
+    .range(["#016450", "#02818a", "#3690c0", "#67a9cf", "#a6bddb", "#d0d1e6"]);
 
 // Initial chart path descriptions
 var bostonMapProjection = d3.geo.mercator()
-    .center([0,0])
-    .scale(120)
+    .center([-70.9,42.27])
+    .scale(76000)
     .rotate([0,0]);
 
 var bostonMapPath = d3.geo.path()
     .projection(bostonMapProjection);
 
+
+// Initialize tooltip
+var bostonTip = d3.tip().attr("class", "tooltip").html(function(d){ return d[8]; });
+bostonMapSvg.call(bostonTip);
+
+
 // Declare data variables
 var bostonMapColorDomain;
 var bostonGeodata;
+var bostonFoodSites;
 
 
 
@@ -38,10 +46,11 @@ loadBostonMapData();
 function loadBostonMapData() {
     queue()
         .defer(d3.json, "data/boston.topo.json")
-        .await(function(error, map){
+        .defer(d3.json, "data/foodSites.json")
+        .await(function(error, map, sites){
             // Store Geo Data
             bostonGeodata = map;
-
+            bostonFoodSites = sites.data;
 
             // Draw the visualizations for the first time
             updateBostonVisualization();
@@ -53,42 +62,22 @@ function loadBostonMapData() {
 
 // Render visualization
 function updateBostonVisualization() {
-    //Update Data
-
-    // Declare temp variables to hold filtered data
-    var tempWorldMapData;
 
     var bostonGroup = bostonMapSvg.append("g");
     bostonMapSvg.selectAll("path").remove();
     bostonGroup.selectAll("path")
-        .data(topojson.feature(bostonGeodata,bostonGeodata.objects.Bos_neighborhoods_new).features)
+        .data(topojson.feature(bostonGeodata,bostonGeodata.objects.ma).features)
         .enter()
         .append("path")
         .attr("d", bostonMapPath)
         .style("fill", function(d) {
-
-            // --> CHECK IF DATA IS A VALID NUMBER
-            //if(isNaN(tempWorldMapDataArray[d.id])==true) {
-                return "#ccc";
-            //} else {
-            //    return worldMapColorScale(tempWorldMapDataArray[d.id]);
-            //}
+            //return bostonMapColorScale(0);
+            return "#f5f5d0"
         })
         .on("mouseover", function(d) {
             d3.select(this).transition().duration(300).style("opacity", 0.8);
             div.transition().duration(300)
                 .style("opacity", 1);
-
-            // --> CHECK IF DATA IS AVAILABLE
-           // if(isNaN(tempWorldMapDataArray[d.id])==true) {
-           //     div.text("No Data")
-            //}
-            //else{
-            //    div.text(d.properties.name + " : " + tempWorldMapDataArray[d.id])
-            //}
-
-            //div.style("left", (d3.event.pageX) + "px")
-             //   .style("top", (d3.event.pageY -30) + "px");
         })
         .on("mouseout", function() {
             d3.select(this)
@@ -98,4 +87,33 @@ function updateBostonVisualization() {
                 .style("opacity", 0);
         })
     ;
+
+
+    // Higlight locations
+    bostonMapSvg.selectAll("circle")
+        .data(bostonFoodSites)
+        .enter().append("circle")
+        .attr("class", "foodSite")
+        .attr("cx", function(d){
+            return bostonMapProjection([d[9][2], d[9][1]])[0];
+        })
+        .attr("cy", function(d){
+            return bostonMapProjection([d[9][2], d[9][1]])[1];
+        })
+        .attr("r", "3")
+        .style("fill", function(d){
+            return bostonMapColorScale(d[0]%6);
+        })
+        .style("stroke", "black")
+        .on("mouseover", function(d) {
+            d3.select(this)
+                .transition().duration(300).attr("r", "6");
+            bostonTip.show(d);
+        })
+        .on("mouseout", function(d) {
+            d3.select(this)
+                .transition().duration(300)
+                .attr("r", "3");
+            bostonTip.hide(d);
+        });
 }

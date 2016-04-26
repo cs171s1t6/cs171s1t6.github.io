@@ -46,8 +46,10 @@ var worldMapSvg = d3.select("#worldMap").append("svg")
 
 
 // Define Scales
+//var worldLineXScale = d3.scale.ordinal()
+//    .range([0, worldLineWidth/2, worldLineWidth]);
 var worldLineXScale = d3.scale.ordinal()
-    .range([0, worldLineWidth/2, worldLineWidth]);
+    .rangeRoundBands([0, worldLineWidth], .1);
 var worldLineYDollarScale = d3.scale.linear()
     .range([worldLineHeight, 0]);
 
@@ -56,7 +58,8 @@ var worldAreaXScale = d3.scale.linear()
 var worldAreaYScale = d3.scale.linear()
     .domain([0,500000000])
     .range([worldAreaHeight, 0]);
-var worldAreaCategoryScale = d3.scale.category20();
+var worldAreaCategoryScale = d3.scale.ordinal()
+    .range(["#4d0000", "#7f0000", "#b30000", "#d7301f", "#ef6548", "#fc8d59", "#fdbb84", "#fdd49e", "#fee8c8", "#fff7ec"]);
     var worldAreaCategoryScaleFullDomain;
 
 var worldMapColorScale = d3.scale.threshold()
@@ -65,9 +68,9 @@ var worldMapColorScale = d3.scale.threshold()
 
 
 // Initial chart path descriptions
-var worldLineLine = d3.svg.line();
-var worldLinePath = worldLineSvg.append("path")
-    .attr("class", "line");
+//var worldLineLine = d3.svg.line();
+//var worldLinePath = worldLineSvg.append("path")
+//    .attr("class", "line");
 
 var worldAreaArea = d3.svg.area()
     .x(function(d) {
@@ -127,6 +130,8 @@ var worldAreaYAxisGroup = worldAreaSvg.append("g")
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
+var worldAreaTip = d3.tip().attr("class", "tooltip").html(function(d){ return d.name; });
+worldAreaSvg.call(worldAreaTip);
 
 
 
@@ -292,7 +297,11 @@ function updateVisualization() {
     tempWorldLineData.forEach(function(d) {
         d.Country = "World";
         d.Category = d.key;
-        d.Value = d.values;
+        if(d.key == "Waste"){
+            d.Value = d.values/100;
+        } else {
+            d.Value = d.values;
+        }
     });
 
     tempWorldAreaData = d3.nest()
@@ -348,40 +357,56 @@ function updateVisualization() {
 
 
     // Update Visualization Proper
+    /*
     worldLineLine
         .defined(function(d){return d.Value;})
         .x(function(d) {
             return worldLineXScale(d.Category);
         })
         .y(function(d) {
-            console.log(d.Value);
             return worldLineYDollarScale(d.Value);
         });
-
-    /*var dataNest = d3.nest()
-        .key(function(d){return d.Country;})
-        .entries(tempWorldLineData);
-
-    dataNest.forEach(function(d){
-        worldLineSvg.append("path")
-            .attr("class", "line")
-            .attr("d", worldLineLine);
-    });*/
 
     worldLinePath
         .datum(tempWorldLineData)
         .transition()
         .duration(800)
         .attr("d", worldLineLine);
+    */
 
-    console.log(tempWorldAreaData);
-    console.log(worldAreaCategoryScale.domain());
+    var worldLineLine = worldLineSvg.selectAll("rect")
+        .data(tempWorldLineData);
+
+    // Enter (initialize the newly added elements)
+    worldLineLine.enter().append("rect")
+        .attr("class", "bar")
+        .style("fill", "#de2d26");
+
+    // Update (set the dynamic properties of the elements)
+    worldLineLine
+        .transition()
+        .duration(1000)
+        .attr("x", function(d){
+            return worldLineXScale(d.Category);
+        })
+        .attr("y", function(d){
+            return worldLineYDollarScale(d.Value);
+        })
+        .attr("width", worldLineXScale.rangeBand())
+        .attr("height", function(d)
+        {
+            return worldLineHeight - worldLineYDollarScale(d.Value);
+        });
+
+    // Exit
+    worldLineLine.exit().remove();
+
     tempWorldAreaData = worldAreaStack(worldAreaCategoryScale.domain().map(function(name) {
 
         return {
             name: name,
             values: tempWorldAreaData.map(function(d) {
-                return {date: d.key, y: d.values[d.values.map(function(e){ return e.key; }).indexOf(name)].values};
+                return {date: d.key, y: d.values[d.values.map(function(e){ return e.key; }).indexOf(name)].values/1000};
             })
         };
     }));
@@ -391,11 +416,12 @@ function updateVisualization() {
         }
     });
     worldAreaYScale.domain([0,worldAreaProductMax]);
-    console.log(tempWorldAreaData);
     var worldAreaProduct = worldAreaSvg.selectAll(".worldAreaProduct")
         .data(tempWorldAreaData)
         .enter().append("g")
-        .attr("class", "worldAreaProduct");
+        .attr("class", "worldAreaProduct")
+        .on("mouseover", worldAreaTip.show)
+        .on("mouseout", worldAreaTip.hide);
 
     worldAreaProduct.append("path")
         .attr("class", function(d) {
@@ -409,14 +435,14 @@ function updateVisualization() {
             return worldAreaArea(d.values);
         });
 
-
+    /*
     worldAreaProduct.append("text")
         .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
         .attr("transform", function(d) { return "translate(" + worldAreaXScale(d.value.date) + "," + worldAreaYScale(d.value.y0 + d.value.y / 2) + ")"; })
         .attr("x", -6)
         .attr("dy", ".35em")
         .text(function(d) { return d.name; });
-
+    */
 
 
     var g = worldMapSvg.append("g");
@@ -448,7 +474,7 @@ function updateVisualization() {
                 div.text("No Data")
             }
             else{
-                div.text(d.properties.name + " : " + tempWorldMapDataArray[d.id])
+                div.text(d.properties.name + " : " + Math.round(tempWorldMapDataArray[d.id]) + " tonnes")
             }
 
             div.style("left", (d3.event.pageX) + "px")
@@ -468,7 +494,6 @@ function updateVisualization() {
 
             var tempCountry = d3.select(this);
 
-            console.log(tempCountry);
 
             var selectedCountry = selectedCountries.indexOf(tempCountry.attr("countrycode"));
             console.log(selectedCountry);
@@ -523,8 +548,7 @@ function updateVisualization() {
     worldMaplegend.append("text")
         .attr("x", 55)
         .attr("y", function(d, i){ return worldMapHeight - (i*height2) - height2 - 8;})
-        .text(function(d, i){ return worldMapColorDomain[i];
-        });
+        .text(function(d, i){ return Math.round(worldMapColorDomain[i]) + " tonnes"; });
 }
 
 
