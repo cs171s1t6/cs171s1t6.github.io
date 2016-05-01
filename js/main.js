@@ -10,18 +10,19 @@ var col12Width = 1000 - margin.left - margin.right,
 
 // Define SVG Sizes
 var worldLineWidth = col6Width;
-var worldLineHeight = col6Height;
+var worldLineHeight = col6Height*0.67;
 
 var worldAreaWidth = col6Width;
-var worldAreaHeight = col6Height;
+var worldAreaHeight = col6Height*0.67;
 
-var worldMapWidth = col12Width;
-var worldMapHeight = col12Height;
+var worldMapWidth = col6Width*1.25;
+var worldMapHeight = col6Height*1.67;
 
 
 // Other common variables
 var formatDate = d3.time.format("%Y"); // Date parser (https://github.com/mbostock/d3/wiki/Time-Formatting)
-
+var commaFormat = d3.format(",");
+var g;
 
 
 
@@ -52,6 +53,8 @@ var worldLineXScale = d3.scale.ordinal()
     .rangeRoundBands([0, worldLineWidth], .1);
 var worldLineYDollarScale = d3.scale.linear()
     .range([worldLineHeight, 0]);
+var worldLineYTonScale = d3.scale.linear()
+    .range([worldLineHeight, 0]);
 
 var worldAreaXScale = d3.scale.linear()
     .range([0, worldAreaWidth]);
@@ -59,6 +62,8 @@ var worldAreaYScale = d3.scale.linear()
     .domain([0,500000000])
     .range([worldAreaHeight, 0]);
 var worldAreaCategoryScale = d3.scale.ordinal()
+    .range(["#4d0000", "#7f0000", "#b30000", "#d7301f", "#ef6548", "#fc8d59", "#fdbb84", "#fdd49e", "#fee8c8", "#fff7ec"]);
+var worldAreaCategoryScaleFull = d3.scale.ordinal()
     .range(["#4d0000", "#7f0000", "#b30000", "#d7301f", "#ef6548", "#fc8d59", "#fdbb84", "#fdd49e", "#fee8c8", "#fff7ec"]);
     var worldAreaCategoryScaleFullDomain;
 
@@ -87,11 +92,18 @@ var worldAreaStack = d3.layout.stack()
 
 var worldMapProjection = d3.geo.mercator()
     .center([0,0])
-    .scale(120)
+    .scale(80)
     .rotate([0,0]);
 
 var worldMapPath = d3.geo.path()
     .projection(worldMapProjection);
+
+var worldMapZoom = d3.behavior.zoom()
+    .translate(worldMapProjection.translate())
+    .scale(worldMapProjection.scale())
+    .scaleExtent([worldMapHeight, 8 * worldMapHeight])
+    .on("zoom", zoomed);
+worldMapSvg.call(worldMapZoom)
 
 
 
@@ -101,10 +113,14 @@ var worldLineXAxis = d3.svg.axis()
     .orient("bottom");
 var worldLineYAxis = d3.svg.axis()
     .orient("left");
+var worldLineYTonAxis = d3.svg.axis()
+    .orient("right");
 
 var worldAreaXAxis = d3.svg.axis()
+    .tickFormat(d3.format("d"))
     .orient("bottom");
 var worldAreaYAxis = d3.svg.axis()
+    .tickFormat(d3.format(","))
     .orient("left");
 
 
@@ -116,12 +132,36 @@ var worldLineXAxisGroup = worldLineSvg.append("g")
     .attr("transform", "translate(0," + worldLineHeight + ")");
 var worldLineYAxisGroup = worldLineSvg.append("g")
     .attr("class", "axis y-axis");
+var worldLineYTonAxisGroup = worldLineSvg.append("g")
+    .attr("class", "axis y-axis")
+    .attr("transform", "translate(" + (worldLineWidth - 5) + ", 0)");
 
 var worldAreaXAxisGroup = worldAreaSvg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + worldAreaHeight + ")");
 var worldAreaYAxisGroup = worldAreaSvg.append("g")
     .attr("class", "y axis");
+
+
+
+
+// Append Axes Labels
+worldLineYAxisGroup.append("text")
+    .attr("x", -165)
+    .attr("y", 15)
+    .attr("transform", "rotate(-90)")
+    .text("US Dollars (Avg. per Country)");
+worldLineYTonAxisGroup.append("text")
+    .attr("x", -155)
+    .attr("y", -10)
+    .attr("transform", "rotate(-90)")
+    .text("100 Tons (Avg. per Country)");
+
+worldAreaYAxisGroup.append("text")
+    .attr("x", -75)
+    .attr("y", 15)
+    .attr("transform", "rotate(-90)")
+    .text("1,000 Tons");
 
 
 
@@ -175,10 +215,11 @@ function loadWorldLineData() {
 
 
         worldAreaData = csv.filter(function(d){
-            return d.Category == "Waste" && d.Type != "Total" && d.Type != "Null";
+            return d.Category == "Waste";
         });
         worldAreaCategoryScale.domain(["Cereals - Excluding Beer", "Starchy Roots", "Vegetables", "Fruits - Excluding Wine", "Sugar Crops", "Oilcrops", "Vegetable Oils", "Pulses", "Treenuts", "Alcoholic Beverages"]);
         worldAreaCategoryScaleFullDomain = worldAreaCategoryScale.domain();
+        worldAreaCategoryScaleFull.domain(worldAreaCategoryScaleFullDomain);
 
         worldMapData = csv.filter(function(d){
             return d.Category == "Waste";
@@ -269,9 +310,12 @@ function updateVisualization() {
     // Filter by user selection if necessary
     if(productSelection != "All"){
         tempWorldLineData = tempWorldLineData.filter(function(d){
-            return d.Type == productSelection;
+            return d.Type == productSelection || d.Type == "Total";
         });
 
+        tempWorldAreaData = tempWorldAreaData.filter(function(d){
+            return d.Type == productSelection;
+        });
         worldAreaCategoryScale.domain(worldAreaCategoryScale.domain().filter(function(d) {if(d == productSelection){return d;}}));
 
         tempWorldMapData = tempWorldMapData.filter(function(d){
@@ -347,6 +391,9 @@ function updateVisualization() {
     worldLineYDollarScale.domain([0 ,d3.max(tempWorldLineData, function(d) {
         return d.Value;
     })]);
+    worldLineYTonScale.domain([0 ,d3.max(tempWorldLineData, function(d) {
+        return d.Value;
+    })]);
 
     worldAreaXScale.domain(d3.extent(tempWorldAreaData, function(d) { return d.key; }));
 
@@ -380,7 +427,13 @@ function updateVisualization() {
     // Enter (initialize the newly added elements)
     worldLineLine.enter().append("rect")
         .attr("class", "bar")
-        .style("fill", "#de2d26");
+        .style("fill", function(d){
+            if(d.Category == "Waste"){
+                return "#4d0000";
+            } else {
+                return "#de2d26";
+            }
+        });
 
     // Update (set the dynamic properties of the elements)
     worldLineLine
@@ -406,7 +459,7 @@ function updateVisualization() {
         return {
             name: name,
             values: tempWorldAreaData.map(function(d) {
-                return {date: d.key, y: d.values[d.values.map(function(e){ return e.key; }).indexOf(name)].values/1000};
+                return {date: d.key, y: d.values[d.values.map(function(f){ return f.key; }).indexOf(name)].values/1000};
             })
         };
     }));
@@ -428,7 +481,7 @@ function updateVisualization() {
             var nameClass = d.name.replace(/\s+/g, '');
             return "area " + nameClass;
         })
-        .style("fill", function(d) { return worldAreaCategoryScale(d.name); })
+        .style("fill", function(d) { return worldAreaCategoryScaleFull(d.name); })
         .transition()
         .duration(800)
         .attr("d", function(d) {
@@ -445,7 +498,7 @@ function updateVisualization() {
     */
 
 
-    var g = worldMapSvg.append("g");
+    g = worldMapSvg.append("g");
     worldMapSvg.selectAll("path").remove();
     g.selectAll("path")
         .data(topojson.feature(geodata,geodata.objects.subunits).features)
@@ -481,7 +534,7 @@ function updateVisualization() {
                 div.text("No Data")
             }
             else{
-                div.text(d.properties.name + " : " + Math.round(tempWorldMapDataArray[d.id]) + " tonnes")
+                div.text(d.properties.name + " : " + commaFormat(Math.round(tempWorldMapDataArray[d.id])) + " tons")
             }
 
             div.style("left", (d3.event.pageX) + "px")
@@ -524,6 +577,7 @@ function updateVisualization() {
     // Update Axes Scales
     worldLineXAxis.scale(worldLineXScale);
     worldLineYAxis.scale(worldLineYDollarScale);
+    worldLineYTonAxis.scale(worldLineYTonScale);
 
     worldAreaXAxis.scale(worldAreaXScale);
     worldAreaYAxis.scale(worldAreaYScale);
@@ -534,6 +588,7 @@ function updateVisualization() {
     // Update Axes/Legends
     worldLineXAxisGroup.transition().duration(800).call(worldLineXAxis);
     worldLineYAxisGroup.transition().duration(800).call(worldLineYAxis);
+    worldLineYTonAxisGroup.transition().duration(800).call(worldLineYTonAxis);
 
     worldAreaXAxisGroup.transition().duration(800).call(worldAreaXAxis);
     worldAreaYAxisGroup.transition().duration(800).call(worldAreaYAxis);
@@ -555,9 +610,8 @@ function updateVisualization() {
     worldMaplegend.append("text")
         .attr("x", 55)
         .attr("y", function(d, i){ return worldMapHeight - (i*height2) - height2 - 8;})
-        .text(function(d, i){ return Math.round(worldMapColorDomain[i]) + " tonnes"; });
+        .text(function(d, i){ return commaFormat(Math.round(worldMapColorDomain[i])) + " tons"; });
 }
-
 
 
 
@@ -579,4 +633,12 @@ function initializeWorldYearSlider() {
     });
     $( "#yearRangeValues" ).val( $( "#yearRangeSelector" ).slider( "values", 0 ) +
         " - " + $( "#yearRangeSelector" ).slider( "values", 1 ) );
+}
+
+
+
+
+function zoomed() {
+    worldMapProjection.translate(d3.event.translate).scale(d3.event.scale);
+    g.selectAll("path").attr("d", worldMapPath);
 }

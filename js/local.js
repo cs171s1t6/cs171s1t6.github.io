@@ -94,6 +94,7 @@ var dataCollection;
 var maxCollection;
 var colorDomainCollection;
 var labelCollection;
+var massGeodata;
 
 // --> SET GLOBAL MAXIMA VARIABLES TO ZERO
 
@@ -368,7 +369,7 @@ function loadData() {
  * */
 
 
-            geodata = map;
+            massGeodata = map;
 
 /*
  * #######################################################################################################
@@ -469,9 +470,8 @@ function updateLocalVisualization(option) {
 
 
 
-
     g.selectAll("path")
-        .data(topojson.feature(geodata, geodata.objects.ma).features)
+        .data(topojson.feature(massGeodata, massGeodata.objects.ma).features)
         .enter()
         .append("path")
         .attr("d", path)
@@ -503,7 +503,7 @@ function updateLocalVisualization(option) {
         .on("mouseover", function(d) {
             d3.select(this).transition().duration(300).style("opacity", 1);
             div.transition().duration(300)
-                .style("opacity", 1)
+                .style("opacity", 1);
 
             // --> CHECK IF DATA IS AVAILABLE
 
@@ -511,7 +511,7 @@ function updateLocalVisualization(option) {
                 div.text("No Data")
             }
             else{
-                div.text(dataCollection[option][d.properties.zip].toPrecision(4) + " tons")
+                div.text(commaFormat(dataCollection[option][d.properties.zip].toPrecision(4)) + " tons")
             }
 
              div.style("left", (d3.event.pageX) + "px")
@@ -566,6 +566,6 @@ function updateLocalVisualization(option) {
     legend.append("text")
         .attr("x", 55)
         .attr("y", function(d, i){ return height - (i*height2) - height2-28;})
-        .text(function(d, i){ return labelCollection[option][i]+ " tons";
+        .text(function(d, i){ return commaFormat(labelCollection[option][i])+ " tons";
         });
 }
