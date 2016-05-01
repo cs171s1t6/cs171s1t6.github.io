@@ -93,7 +93,8 @@ var worldAreaStack = d3.layout.stack()
 var worldMapProjection = d3.geo.mercator()
     .center([0,0])
     .scale(80)
-    .rotate([0,0]);
+    .rotate([0,0])
+    .translate([250,250]);
 
 var worldMapPath = d3.geo.path()
     .projection(worldMapProjection);
@@ -101,9 +102,8 @@ var worldMapPath = d3.geo.path()
 var worldMapZoom = d3.behavior.zoom()
     .translate(worldMapProjection.translate())
     .scale(worldMapProjection.scale())
-    .scaleExtent([worldMapHeight, 8 * worldMapHeight])
     .on("zoom", zoomed);
-worldMapSvg.call(worldMapZoom)
+worldMapSvg.call(worldMapZoom);
 
 
 
@@ -488,15 +488,6 @@ function updateVisualization() {
             return worldAreaArea(d.values);
         });
 
-    /*
-    worldAreaProduct.append("text")
-        .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-        .attr("transform", function(d) { return "translate(" + worldAreaXScale(d.value.date) + "," + worldAreaYScale(d.value.y0 + d.value.y / 2) + ")"; })
-        .attr("x", -6)
-        .attr("dy", ".35em")
-        .text(function(d) { return d.name; });
-    */
-
 
     g = worldMapSvg.append("g");
     worldMapSvg.selectAll("path").remove();
@@ -548,9 +539,7 @@ function updateVisualization() {
                 .style("opacity", 0);
         })
         .on("click", function() {
-            // Fix This Line
             d3.select(this).transition().duration(300).style("stroke-width", "2px");
-            //--------------
 
             var tempCountry = d3.select(this);
 

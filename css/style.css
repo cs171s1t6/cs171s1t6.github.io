@@ -1,5 +1,6 @@
 .center {
     text-align: center;
+    background-color: #1C9A3D;
 }
 
 .container, header, main, footer {
@@ -8,11 +9,16 @@
 
 body {
     background-color: lightgrey;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 .container {
     margin-top: 15px;
     background-color: white;
 }
+
+
+
 
 header {
     background-color: black;
@@ -139,4 +145,29 @@ color: #666;
 
 #percentage {
     font-size: 2.5em;
+}
+
+
+
+
+/****************/
+/*  TEXT  */
+/****************/
+
+h1 {
+    font-style: normal;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: #c97424;
+}
+
+h2 {
+    font-style: normal;
+    font-size: large;
+    color: #c97424;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: medium;
 }
