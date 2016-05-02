@@ -20,7 +20,6 @@ var worldMapHeight = col6Height*1.67;
 
 
 // Other common variables
-var formatDate = d3.time.format("%Y"); // Date parser (https://github.com/mbostock/d3/wiki/Time-Formatting)
 var commaFormat = d3.format(",");
 var g;
 
@@ -47,8 +46,6 @@ var worldMapSvg = d3.select("#worldMap").append("svg")
 
 
 // Define Scales
-//var worldLineXScale = d3.scale.ordinal()
-//    .range([0, worldLineWidth/2, worldLineWidth]);
 var worldLineXScale = d3.scale.ordinal()
     .rangeRoundBands([0, worldLineWidth], .1);
 var worldLineYDollarScale = d3.scale.linear()
@@ -73,10 +70,6 @@ var worldMapColorScale = d3.scale.threshold()
 
 
 // Initial chart path descriptions
-//var worldLineLine = d3.svg.line();
-//var worldLinePath = worldLineSvg.append("path")
-//    .attr("class", "line");
-
 var worldAreaArea = d3.svg.area()
     .x(function(d) {
         return worldAreaXScale(d.date);
@@ -261,8 +254,6 @@ function updateVisualization() {
 
 
     // Country Filtering
-    //selectedCountries = [];
-
     console.log(selectedCountries);
     if(selectedCountries.length > 0){
         tempWorldLineData = worldLineData.filter(function(d){
@@ -404,23 +395,6 @@ function updateVisualization() {
 
 
     // Update Visualization Proper
-    /*
-    worldLineLine
-        .defined(function(d){return d.Value;})
-        .x(function(d) {
-            return worldLineXScale(d.Category);
-        })
-        .y(function(d) {
-            return worldLineYDollarScale(d.Value);
-        });
-
-    worldLinePath
-        .datum(tempWorldLineData)
-        .transition()
-        .duration(800)
-        .attr("d", worldLineLine);
-    */
-
     var worldLineLine = worldLineSvg.selectAll("rect")
         .data(tempWorldLineData);
 

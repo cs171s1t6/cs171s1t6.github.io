@@ -89,7 +89,7 @@ function updateBostonVisualization() {
     ;
 
 
-    // Higlight locations
+    // Highlight locations
     bostonMapSvg.selectAll("circle")
         .data(bostonFoodSites)
         .enter().append("circle")
